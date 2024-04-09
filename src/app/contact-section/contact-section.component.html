@@ -1,0 +1,204 @@
+<div class="contactSection">
+  <div class="headline">
+    <h2>Contact</h2>
+    <div class="line"></div>
+  </div>
+  <div>
+    <div class="lineSpan"></div>
+    <div class="spanContainer">
+      <span class="firstSpan">Got a problem to solve?</span>
+      <span class="secondSpan">
+        Contact me through this form, I am interested in hearing<br />
+        from you, knowing your ideas and contributing to your <br />projects
+        with my work.
+      </span>
+      <span class="thirdSpan"
+        >Need a Frontend developer? <span class="lastSpan">Contact me!</span>
+      </span>
+    </div>
+  </div>
+  <div class="contactFormContainer">
+    <form action="action_page.php">
+      <!---<label for="fname"></label>
+      <input
+        type="text"
+        (click)="requiredMessage()"
+        [(ngModel)]="message"
+        name="firstname"
+        [ngClass]="{ clicked: showMessage }"
+      />
+      <span class="requiredText" [hidden]="!showMessage" [ngClass]="{'show': showMessage, 'transition-text': this.message.length === 0}"
+        >Your name is required
+      </span>
+      <label for="mail"></label>
+      <input
+        type="email"
+        (click)="requiredEmail()"
+        [(ngModel)]="email"
+        name="email"
+        [ngClass]="{ clicked: showEmail }"
+      />
+      <span class="requiredText" *ngIf="showEmail" 
+        >Your email is required
+      </span>
+
+      <label for="subject"></label>
+      <textarea
+        id="subject"
+        name="subject"
+        placeholder="Your message"
+        style="height: 200px"
+        type="text"
+        (click)="requiredTextMessage()"
+        [(ngModel)]="text"
+        name="text"
+        [ngClass]="{ clicked: showText }"
+    
+      >
+     
+      </textarea>
+      <span class="requiredTextArea" *ngIf="showText"</span></span></span></span>
+      >Your message is empty
+    </span>
+      <div class="privacyPolicyContainer">
+        <div class="privacyPolicy">
+          <label class="container">
+            <input type="checkbox" checked="checked" />
+            <span class="checkmark"></span>
+          </label>
+          I've read the
+          <a href="#">privacy policy</a>
+          and agree to the processing of my data as outlined.
+        </div>
+        <button type="submit">Send message :)</button>
+      </div>
+    </form>
+  </div>-->
+  <div class="register-form">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label>Full Name</label>
+        <input
+          type="text"
+          formControlName="fullname"
+          class="form-control"
+          [ngClass]="{ 'is-invalid': submitted && f['fullname'].errors }"
+        />
+        @if (submitted && f['fullname'].errors) {
+        <div class="invalid-feedback">
+          @if (f['fullname'].errors['required']) {
+          <div>Fullname is required</div>
+          }
+        </div>
+        }
+      </div>
+  
+      <div class="form-group">
+        <label>Username</label>
+        <input
+          type="text"
+          formControlName="username"
+          class="form-control"
+          [ngClass]="{ 'is-invalid': submitted && f['username'].errors }"
+        />
+        @if (submitted && f['username'].errors) {
+        <div class="invalid-feedback">
+          @if (f['username'].errors['required']) {
+          <div>Username is required</div>
+          } @if (f['username'].errors['minlength']) {
+          <div>Username must be at least 6 characters</div>
+          } @if (f['username'].errors['maxlength']) {
+          <div>Username must not exceed 20 characters</div>
+          }
+        </div>
+        }
+      </div>
+  
+      <div class="form-group">
+        <label>Email</label>
+        <input
+          type="text"
+          formControlName="email"
+          class="form-control"
+          [ngClass]="{ 'is-invalid': submitted && f['email'].errors }"
+        />
+        @if (submitted && f['email'].errors) {
+        <div class="invalid-feedback">
+          @if (f['email'].errors['required']) {
+          <div>Email is required</div>
+          } @if (f['email'].errors['email']) {
+          <div>Email is invalid</div>
+          }
+        </div>
+        }
+      </div>
+  
+      <div class="form-group">
+        <label>Password</label>
+        <input
+          type="password"
+          formControlName="password"
+          class="form-control"
+          [ngClass]="{ 'is-invalid': submitted && f['password'].errors }"
+        />
+        @if (submitted && f['password'].errors) {
+        <div class="invalid-feedback">
+          @if (f['password'].errors['required']) {
+          <div>Password is required</div>
+          } @if (f['password'].errors['minlength']) {
+          <div>Password must be at least 6 characters</div>
+          } @if (f['password'].errors['maxlength']) {
+          <div>Username must not exceed 40 characters</div>
+          }
+        </div>
+        }
+      </div>
+  
+      <div class="form-group">
+        <label>Confirm Password</label>
+        <input
+          type="password"
+          formControlName="confirmPassword"
+          class="form-control"
+          [ngClass]="{ 'is-invalid': submitted && f['confirmPassword'].errors }"
+        />
+        @if (submitted && f['confirmPassword'].errors) {
+        <div class="invalid-feedback">
+          @if (f['confirmPassword'].errors['required']) {
+          <div>Confirm Password is required</div>
+          } @if (f['confirmPassword'].errors['matching']) {
+          <div>Confirm Password does not match</div>
+          }
+        </div>
+        }
+      </div>
+  
+      <div class="form-group form-check">
+        <input
+          type="checkbox"
+          formControlName="acceptTerms"
+          class="form-check-input"
+          [ngClass]="{ 'is-invalid': submitted && f['acceptTerms'].errors }"
+        />
+        <label for="acceptTerms" class="form-check-label"
+          >I have read and agree to the Terms</label
+        >
+        @if (submitted && f['acceptTerms'].errors) {
+        <div class="invalid-feedback">Accept Terms is required</div>
+        }
+      </div>
+  
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Register</button>
+        <button
+          type="button"
+          (click)="onReset()"
+          class="btn btn-warning float-right"
+        >
+          Reset
+        </button>
+      </div>
+    </form>
+  </div>
+  
+

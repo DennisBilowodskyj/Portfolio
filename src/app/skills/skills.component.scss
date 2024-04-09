@@ -1,0 +1,116 @@
+.skillContent{
+    max-width: 1920px;
+    img{
+        position: absolute;
+        width: 100%;
+        top: 1500px;
+    }
+}
+.background{
+    background-color: #141D2F;
+    max-width: 1920px;
+    height: 790px;
+}
+.skillIcons{
+    z-index: 1;
+    display: flex;
+    position: absolute;
+    flex-direction: column; 
+    gap: 80px;
+    margin-left: 100px; 
+}
+.display-flex{
+    display: flex; 
+    gap: 10px;
+    figure{
+        display: flex;
+        gap: 10px;
+        color: white;
+        flex-direction: column;
+        align-items: center;
+        width: 88px;
+        height: 100px;
+        text-align: center;
+    }
+    img{
+        width: 56px;
+        height: 60px;
+            }
+    figcaption{
+        font-size: 16px;
+    font-weight: 700;
+    line-height: 19px;
+    }
+}
+
+.skillTextBox{
+    width: 572px;
+    height: 286px;
+    position: absolute;
+    display: flex;
+    color: white;
+    right: 0;
+    margin-top: 170px;
+    flex-direction: column;
+    gap: 35px;
+    h2{
+        font-weight: 700;
+        font-size: 90px;
+        line-height: 108px;
+        height: 35px;
+    }
+    p{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+    }
+}
+.btn{
+    display: flex;
+    margin-top: 10px;
+    a{
+        padding: 15px 30px;
+        text-decoration: none;
+        background-color: #70e61c;
+        border-radius: 10px;
+        color: #FFFFFF;
+        font-size: 23px;
+        font-weight: 400;
+        transition: background-color 100ms ease-in-out, padding 100ms ease-in-out;      
+        }
+    & :hover{
+        background-color: #9747FF;
+        padding: 20px 40px;
+        }
+}
+.line{
+    width: 289px;
+    height: 4px;
+    background-color: #1CDAE6;
+    position: absolute;
+    right: 0;    
+    margin-top: 130px;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.display-flex figure:hover {
+    animation: vibrate 0.5s linear infinite;
+  }
+  
+  @keyframes vibrate {
+    0% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(2px);
+    }
+    50% {
+      transform: translateX(-2px);
+    }
+    75% {
+      transform: translateX(2px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
