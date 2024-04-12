@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, viewChild } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 import {
   AbstractControl,
   FormBuilder,
@@ -19,6 +20,10 @@ import Validation from './validation';
 })
 export class ContactSectionComponent {
 message: any;
+isChecked: boolean = false;
+toggleCheck() {
+  this.isChecked = !this.isChecked;
+}
 requiredMessage() {
 throw new Error('Method not implemented.');
 }

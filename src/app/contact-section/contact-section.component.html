@@ -74,18 +74,18 @@
       </div>
     </form>
   </div>-->
-  <div class="register-form">
-    <form [formGroup]="form" (ngSubmit)="onSubmit()">
-      <div class="form-group">
-        <label>Full Name</label>
+  <div class="register-form container contactFormContainer">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" class="newFormGroup">
+      <div class="form-group unsetMargin">
         <input
           type="text"
+          placeholder="Your name"
           formControlName="fullname"
-          class="form-control"
+          class="form-control test "
           [ngClass]="{ 'is-invalid': submitted && f['fullname'].errors }"
         />
         @if (submitted && f['fullname'].errors) {
-        <div class="invalid-feedback">
+        <div class="invalid-feedback requiredTextStyle" >
           @if (f['fullname'].errors['required']) {
           <div>Fullname is required</div>
           }
@@ -93,16 +93,16 @@
         }
       </div>
   
-      <div class="form-group">
-        <label>Username</label>
+      <div class="form-group unsetMargin">
         <input
           type="text"
+          placeholder="Your email"
           formControlName="username"
-          class="form-control"
+          class="form-control test"
           [ngClass]="{ 'is-invalid': submitted && f['username'].errors }"
         />
         @if (submitted && f['username'].errors) {
-        <div class="invalid-feedback">
+        <div class="invalid-feedback requiredTextStyle">
           @if (f['username'].errors['required']) {
           <div>Username is required</div>
           } @if (f['username'].errors['minlength']) {
@@ -114,16 +114,17 @@
         }
       </div>
   
-      <div class="form-group">
-        <label>Email</label>
-        <input
+      <div class="form-group unsetMargin">
+        <textarea
           type="text"
+          style="height: 200px;"
+          placeholder="Your message"
           formControlName="email"
-          class="form-control"
+          class="form-control test"
           [ngClass]="{ 'is-invalid': submitted && f['email'].errors }"
-        />
+        >
         @if (submitted && f['email'].errors) {
-        <div class="invalid-feedback">
+        <div class="invalid-feedback requiredTextStyle">
           @if (f['email'].errors['required']) {
           <div>Email is required</div>
           } @if (f['email'].errors['email']) {
@@ -131,72 +132,33 @@
           }
         </div>
         }
+        </textarea>
       </div>
   
-      <div class="form-group">
-        <label>Password</label>
-        <input
-          type="password"
-          formControlName="password"
-          class="form-control"
-          [ngClass]="{ 'is-invalid': submitted && f['password'].errors }"
-        />
-        @if (submitted && f['password'].errors) {
-        <div class="invalid-feedback">
-          @if (f['password'].errors['required']) {
-          <div>Password is required</div>
-          } @if (f['password'].errors['minlength']) {
-          <div>Password must be at least 6 characters</div>
-          } @if (f['password'].errors['maxlength']) {
-          <div>Username must not exceed 40 characters</div>
-          }
-        </div>
-        }
-      </div>
+      
   
-      <div class="form-group">
-        <label>Confirm Password</label>
-        <input
-          type="password"
-          formControlName="confirmPassword"
-          class="form-control"
-          [ngClass]="{ 'is-invalid': submitted && f['confirmPassword'].errors }"
-        />
-        @if (submitted && f['confirmPassword'].errors) {
-        <div class="invalid-feedback">
-          @if (f['confirmPassword'].errors['required']) {
-          <div>Confirm Password is required</div>
-          } @if (f['confirmPassword'].errors['matching']) {
-          <div>Confirm Password does not match</div>
-          }
-        </div>
-        }
-      </div>
+      
   
-      <div class="form-group form-check">
-        <input
+      <div class="form-group form-check privacyPolicy unsetMargin">
+        <div
           type="checkbox"
           formControlName="acceptTerms"
-          class="form-check-input"
-          [ngClass]="{ 'is-invalid': submitted && f['acceptTerms'].errors }"
-        />
-        <label for="acceptTerms" class="form-check-label"
-          >I have read and agree to the Terms</label
+          class="checkmark"
+          [ngClass]="{ 'is-invalid': submitted && f['acceptTerms'].errors }"></div>
+        
+        <label for="acceptTerms" class="form-check-label textSpacing"
+          >I've read the
+          <a href="#">privacy policy</a>
+          and agree to the processing of my data as outlined.</label
         >
         @if (submitted && f['acceptTerms'].errors) {
         <div class="invalid-feedback">Accept Terms is required</div>
         }
       </div>
   
-      <div class="form-group">
-        <button type="submit" class="btn btn-primary">Register</button>
-        <button
-          type="button"
-          (click)="onReset()"
-          class="btn btn-warning float-right"
-        >
-          Reset
-        </button>
+      <div class="unsetMargin">
+        <button type="submit" class="btn btn-primary Sendbutton">Send message :)</button>
+       
       </div>
     </form>
   </div>
