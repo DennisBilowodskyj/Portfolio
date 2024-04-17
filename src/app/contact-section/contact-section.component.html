@@ -17,28 +17,37 @@
       </span>
     </div>
   </div>
+  <div class="purpleShadow">
+    <img src="../../assets/img/Purple shadow 2.png" />
+  </div>
   <div class="contactFormContainer">
-    <form action="action_page.php">
-      <!---<label for="fname"></label>
+    <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+      <label for="fname"></label>
       <input
         type="text"
-        (click)="requiredMessage()"
-        [(ngModel)]="message"
+        placeholder="Your name"
+        required
+        (click)="requiredName()"
+        [(ngModel)]="name"
+        [(ngModel)]="contactData.name"
         name="firstname"
-        [ngClass]="{ clicked: showMessage }"
+        [ngClass]="{ clicked: showName }"
+        
       />
-      <span class="requiredText" [hidden]="!showMessage" [ngClass]="{'show': showMessage, 'transition-text': this.message.length === 0}"
+      <span class="requiredText" [hidden]="!showName" [ngClass]="{'show': showName, 'transition-text': this.name.length === 0}"
         >Your name is required
       </span>
       <label for="mail"></label>
       <input
         type="email"
+        placeholder="Your email"
+        required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
         (click)="requiredEmail()"
         [(ngModel)]="email"
         name="email"
         [ngClass]="{ clicked: showEmail }"
       />
-      <span class="requiredText" *ngIf="showEmail" 
+      <span class="requiredText" [hidden]="!showEmail" [ngClass]="{'show': showEmail, 'transition-text': this.email.length === 0}"
         >Your email is required
       </span>
 
@@ -47,6 +56,7 @@
         id="subject"
         name="subject"
         placeholder="Your message"
+        required
         style="height: 200px"
         type="text"
         (click)="requiredTextMessage()"
@@ -57,110 +67,30 @@
       >
      
       </textarea>
-      <span class="requiredTextArea" *ngIf="showText"</span></span></span></span>
-      >Your message is empty
+      <span class="requiredTextArea" [hidden]="!showText" [ngClass]="{'show': showText, 'transition-text': this.text.length === 0}">
+      Your message is empty
     </span>
       <div class="privacyPolicyContainer">
         <div class="privacyPolicy">
           <label class="container">
-            <input type="checkbox" checked="checked" />
+            <input type="checkbox" formControlName="acceptTerms" formControlName="acceptTerms" (change)="toggleCheckbox($event)" />
             <span class="checkmark"></span>
           </label>
           I've read the
           <a href="#">privacy policy</a>
           and agree to the processing of my data as outlined.
         </div>
-        <button type="submit">Send message :)</button>
+        <button type="submit" [ngClass]="{ 'active': isChecked }">Send message :)</button>
+        <!--<span class="requiredText" ngIf="!isButtonEnabled">Please accept the privacy policy.</span>-->
       </div>
     </form>
-  </div>-->
-  <div class="register-form container contactFormContainer">
-    <form [formGroup]="form" (ngSubmit)="onSubmit()" class="newFormGroup">
-      <div class="form-group unsetMargin">
-        <input
-          type="text"
-          placeholder="Your name"
-          formControlName="fullname"
-          class="form-control test "
-          [ngClass]="{ 'is-invalid': submitted && f['fullname'].errors }"
-        />
-        @if (submitted && f['fullname'].errors) {
-        <div class="invalid-feedback requiredTextStyle" >
-          @if (f['fullname'].errors['required']) {
-          <div>Fullname is required</div>
-          }
-        </div>
-        }
-      </div>
+    <a href="#" class="goUpButton">
+      <img src="../../assets/img/Property 1=Default.png" class="defaultImg">
+      <img src="../../assets/img/Property 1=Variant2.png" class="hoverImg">
+
+    </a>
+  </div>
   
-      <div class="form-group unsetMargin">
-        <input
-          type="text"
-          placeholder="Your email"
-          formControlName="username"
-          class="form-control test"
-          [ngClass]="{ 'is-invalid': submitted && f['username'].errors }"
-        />
-        @if (submitted && f['username'].errors) {
-        <div class="invalid-feedback requiredTextStyle">
-          @if (f['username'].errors['required']) {
-          <div>Username is required</div>
-          } @if (f['username'].errors['minlength']) {
-          <div>Username must be at least 6 characters</div>
-          } @if (f['username'].errors['maxlength']) {
-          <div>Username must not exceed 20 characters</div>
-          }
-        </div>
-        }
-      </div>
-  
-      <div class="form-group unsetMargin">
-        <textarea
-          type="text"
-          style="height: 200px;"
-          placeholder="Your message"
-          formControlName="email"
-          class="form-control test"
-          [ngClass]="{ 'is-invalid': submitted && f['email'].errors }"
-        >
-        @if (submitted && f['email'].errors) {
-        <div class="invalid-feedback requiredTextStyle">
-          @if (f['email'].errors['required']) {
-          <div>Email is required</div>
-          } @if (f['email'].errors['email']) {
-          <div>Email is invalid</div>
-          }
-        </div>
-        }
-        </textarea>
-      </div>
-  
-      
-  
-      
-  
-      <div class="form-group form-check privacyPolicy unsetMargin">
-        <div
-          type="checkbox"
-          formControlName="acceptTerms"
-          class="checkmark"
-          [ngClass]="{ 'is-invalid': submitted && f['acceptTerms'].errors }"></div>
-        
-        <label for="acceptTerms" class="form-check-label textSpacing"
-          >I've read the
-          <a href="#">privacy policy</a>
-          and agree to the processing of my data as outlined.</label
-        >
-        @if (submitted && f['acceptTerms'].errors) {
-        <div class="invalid-feedback">Accept Terms is required</div>
-        }
-      </div>
-  
-      <div class="unsetMargin">
-        <button type="submit" class="btn btn-primary Sendbutton">Send message :)</button>
-       
-      </div>
-    </form>
   </div>
   
 

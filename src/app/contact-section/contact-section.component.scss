@@ -25,8 +25,6 @@
   height: 4px;
   border-radius: 0 10px 10px 0;
   background-color: #1cdae6;
-  top: 120px;
-  position: relative;
 }
 
 .spanContainer {
@@ -35,7 +33,7 @@
   flex-direction: column;
   margin-left: 100px;
   position: relative;
-  top: 100px;
+  bottom: 20px;
   gap: 20px;
 }
 .firstSpan {
@@ -55,78 +53,149 @@
 }
 
 .contactFormContainer {
-  display: flex !important;
-  width: 617px !important;
-  height: 520px !important;
-  margin-left: 380px !important;
-  position: relative !important;
-  bottom: 30px !important;
-  ::placeholder {
-    color: white !important;
-  }
-
- 
-  .Sendbutton[type="submit"] {
-    background-color: #b6b6b6;
-    color: white;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    font-family: "Poppins";
-    width: 253px;
-    height: 58px;
-    font-size: 23px;
-    font-weight: 400;
-    line-height: 27px;
-  }
-  .privacyPolicyContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 42px;
-  }
-}
-.privacyPolicy {
   display: flex;
-  color: white;
-  font-weight: 400;
-  font-size: 14px;
-  gap: 8px;
+  width: 617px;
+  height: 520px;
+  margin-left: 780px;
   position: relative;
-  bottom: 10px;
-  a {
-    text-decoration: none;
-    color: #9747ff;
+  bottom: 180px ;
+    ::placeholder{
+    color: white;
   }
-}
-.privacyPolicy a:hover {
-  text-decoration: underline;
-}
 
 
+input[type=text],[type=email], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #9747FF;
+  border-radius: 10px;
+  box-sizing: border-box;
+  resize: vertical;
+  background-color: #141D2F;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  margin-bottom: 32px;
+  font-family: 'Poppins';
+  cursor: pointer;
+  color: white;
+}
+input[type=text]:hover,[type=email]:hover,select:hover, textarea:hover{
+  border: 1px solid #1CDAE6;
+
+}
+
+button[type=submit] {
+  background-color: #B6B6B6;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: 'Poppins';
+  width: 253px;
+  height: 58px;
+  font-size: 23px;
+  font-weight: 400;
+  line-height: 27px;
+}
+
+button[type=submit].active {
+  background-color: #70e61c;
+  color: white;
+  transition: background-color 100ms ease-in-out, width 100ms ease-in-out, height 100ms ease-in-out; 
+}
+button[type=submit].active:hover{
+  background-color: #9747FF;
+  width: 273px;
+  height: 68px;
+}
+
+.privacyPolicyContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 42px;
+}
+}
+.privacyPolicy{
+  display: flex;
+    color: white;
+    font-weight: 400;
+    font-size: 14px;
+    gap: 8px;
+    position: relative;
+    bottom: 21px;
+    a{
+      text-decoration: none;
+      color: #9747FF;
+    }
+    }
+    .privacyPolicy a:hover{
+      text-decoration: underline;
+    }
+    /* The container */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
 .checkmark {
   position: absolute;
   top: 0;
+  left: 0;
   height: 18px;
   width: 18px;
   background-color: transparent;
   border: 2px solid #70e61c;
   border-radius: 5px;
+
 }
 
-.checkmark:checked + .checkmark {
+/* On mouse-over, add a grey background color 
+.container:hover input ~ .checkmark {
+  background-color: #797EF3;
+  
+}*/
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
   background-color: unset;
 }
 
-.checkmark:checked + .checkmark:after {
-  display: block;
-}
 
- .checkmark:after {
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
   content: "";
   position: absolute;
   display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
   left: 6px;
   top: 1px;
   width: 5px;
@@ -137,6 +206,7 @@
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
+ 
 
 .checkmark:hover::before {
   content: "";
@@ -151,42 +221,22 @@
   opacity: 0.5;
 }
 
-.test {
-  display: block;
-  width: 617px;
-  height: 50px;
-  /* height: calc(1.5em + .75rem + 2px); */
-  padding: 12px;
-  font-size: 16px;
+.requiredText{
+  color: #E61C40;
+  position: relative;
+  bottom: 20px;
   font-weight: 400;
-  line-height: 19px;
-  color: white;
-  background-color: #141d2f;
-  background-clip: padding-box;
-  border: 1px solid #9747ff;
-  border-radius: 10px;
-  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  cursor: pointer;
-  &:focus.is-invalid {
-    border-color: red !important;
-  }
-}
-.test:hover {
-  border: 1px solid #70e61c;
-}
-.requiredTextStyle {
-  transition: opacity 0.5s ease-in-out;
-  animation-duration: 0.5s;
+  font-size: 14px;
+  transition: opacity 0.3s ease-in-out;
+  animation-duration: 0.3s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
 }
-
-.invalid-feedback.requiredTextStyle {
+.requiredText.show {
   display: block;
   opacity: 0;
   animation-name: fadeIn;
 }
-
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -197,17 +247,69 @@
   }
 }
 
-.newFormGroup {
-  margin-bottom: 30px;
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
+.requiredTextArea{
+  color: #E61C40;
+  position: relative;
+  bottom: 30px;
+  font-weight: 400;
+  font-size: 14px;
+  
 }
 
-.textSpacing {
- margin-left:30px ;
+input:focus-visible, textarea:focus-visible {
+  outline: none;
+  border: 1px solid #E61C40 !important;
+  caret-color: white ;
+  transition: border 300ms ease-in-out;
+  background-image: url('../../assets/img/Vector\ \(1\).png') ;
+  background-repeat: no-repeat;
+  background-position: 570px 50%;
+  
 }
-.unsetMargin{
-  margin-bottom: unset;
-  padding: unset;
+
+textarea:focus-visible{
+  background-position: 570px 15px;
+
 }
+
+.purpleShadow{
+  position: absolute;
+  top: 4030px;
+  right: 0;
+  
+}
+
+.goUpButton {
+  position: absolute;
+  left: 578px;
+  top: 540px;
+}
+
+.goUpButton .defaultImg,
+.goUpButton .hoverImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.goUpButton .defaultImg {
+  opacity: 1;
+  z-index: 1;
+}
+
+.goUpButton .hoverImg {
+  opacity: 0;
+  z-index: 2;
+}
+
+.goUpButton:hover .defaultImg {
+  opacity: 0;
+}
+
+.goUpButton:hover .hoverImg {
+  opacity: 1;
+}
+
+
