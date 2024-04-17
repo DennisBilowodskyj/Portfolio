@@ -79,11 +79,24 @@ input[type=text],[type=email], select, textarea {
   font-family: 'Poppins';
   cursor: pointer;
   color: white;
+
+  
+
 }
+
+
+
 input[type=text]:hover,[type=email]:hover,select:hover, textarea:hover{
   border: 1px solid #1CDAE6;
 
 }
+
+input[type=text].valid{
+ 
+  border: 1px solid yellow;
+}
+
+
 
 button[type=submit] {
   background-color: #B6B6B6;

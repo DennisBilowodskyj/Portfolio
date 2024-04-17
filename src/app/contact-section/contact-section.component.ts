@@ -32,6 +32,7 @@ email: string = '';
 isChecked:boolean = false;
 acceptTerms = new FormControl(false);
 contactForm: any;
+inputValid: boolean = false;
 
 requiredName(){
   if (!this.name){
@@ -40,6 +41,16 @@ requiredName(){
     this.showName = false;
   }
 }
+onChangeInput(): void {
+  if (this.inputValid) {
+    this.inputValid = true; 
+  } else {
+    this.inputValid = false;
+  }
+}
+  
+  
+  
 
 requiredEmail() {
   if (!this.email){

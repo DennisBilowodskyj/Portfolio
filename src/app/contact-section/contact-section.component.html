@@ -31,7 +31,8 @@
         [(ngModel)]="name"
         [(ngModel)]="contactData.name"
         name="firstname"
-        [ngClass]="{ clicked: showName }"
+        (change)="onChangeInput()"
+        [ngClass]="{ clicked: showName, 'valid': inputValid }"
         
       />
       <span class="requiredText" [hidden]="!showName" [ngClass]="{'show': showName}"
