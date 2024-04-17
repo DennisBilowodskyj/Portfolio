@@ -10,7 +10,6 @@ import {
   FormControl,
   Validators,
 } from '@angular/forms';
-import Validation from './validation';
 
 @Component({
   selector: 'app-contact-section',
@@ -32,7 +31,7 @@ showEmail: boolean = false;
 email: string = '';
 isChecked:boolean = false;
 acceptTerms = new FormControl(false);
-  contactForm: any;
+contactForm: any;
 
 requiredName(){
   if (!this.name){
@@ -71,10 +70,10 @@ contactData = {
   message: "",
 }
 
-mailTest = true;
+mailTest = false;
 
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
+    endPoint: 'https://dennis-bilowodskyj.com/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {

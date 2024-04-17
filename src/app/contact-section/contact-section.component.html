@@ -34,7 +34,7 @@
         [ngClass]="{ clicked: showName }"
         
       />
-      <span class="requiredText" [hidden]="!showName" [ngClass]="{'show': showName, 'transition-text': this.name.length === 0}"
+      <span class="requiredText" [hidden]="!showName" [ngClass]="{'show': showName}"
         >Your name is required
       </span>
       <label for="mail"></label>
@@ -47,7 +47,7 @@
         name="email"
         [ngClass]="{ clicked: showEmail }"
       />
-      <span class="requiredText" [hidden]="!showEmail" [ngClass]="{'show': showEmail, 'transition-text': this.email.length === 0}"
+      <span class="requiredText" [hidden]="!showEmail" [ngClass]="{'show': showEmail}"
         >Your email is required
       </span>
 
@@ -67,7 +67,7 @@
       >
      
       </textarea>
-      <span class="requiredTextArea" [hidden]="!showText" [ngClass]="{'show': showText, 'transition-text': this.text.length === 0}">
+      <span class="requiredTextArea" [hidden]="!showText" [ngClass]="{'show': showText}">
       Your message is empty
     </span>
       <div class="privacyPolicyContainer">
