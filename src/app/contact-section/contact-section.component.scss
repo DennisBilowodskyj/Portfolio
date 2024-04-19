@@ -93,7 +93,11 @@ input[type=text]:hover,[type=email]:hover,select:hover, textarea:hover{
 
 input[type=text].valid{
  
-  border: 1px solid yellow;
+  border: 1px solid #70E61C;
+  outline: none;
+  background-image: url('../../assets/img/grünerhaken.png') ;
+  background-repeat: no-repeat;
+  background-position: 570px 50%;
 }
 
 
@@ -147,7 +151,6 @@ button[type=submit].active:hover{
     .privacyPolicy a:hover{
       text-decoration: underline;
     }
-    /* The container */
 .container {
   display: block;
   position: relative;
@@ -161,7 +164,6 @@ button[type=submit].active:hover{
   user-select: none;
 }
 
-/* Hide the browser's default checkbox */
 .container input {
   position: absolute;
   opacity: 0;
@@ -170,7 +172,6 @@ button[type=submit].active:hover{
   width: 0;
 }
 
-/* Create a custom checkbox */
 .checkmark {
   position: absolute;
   top: 0;
@@ -183,31 +184,21 @@ button[type=submit].active:hover{
 
 }
 
-/* On mouse-over, add a grey background color 
-.container:hover input ~ .checkmark {
-  background-color: #797EF3;
-  
-}*/
-
-/* When the checkbox is checked, add a blue background */
 .container input:checked ~ .checkmark {
   background-color: unset;
 }
 
 
-/* Create the checkmark/indicator (hidden when not checked) */
 .checkmark:after {
   content: "";
   position: absolute;
   display: none;
 }
 
-/* Show the checkmark when checked */
 .container input:checked ~ .checkmark:after {
   display: block;
 }
 
-/* Style the checkmark/indicator */
 .container .checkmark:after {
   left: 6px;
   top: 1px;
@@ -234,7 +225,7 @@ button[type=submit].active:hover{
   opacity: 0.5;
 }
 
-.requiredText{
+.requiredText:not(.valid){
   color: #E61C40;
   position: relative;
   bottom: 20px;
@@ -245,7 +236,7 @@ button[type=submit].active:hover{
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
 }
-.requiredText.show {
+.requiredText.show:not(.valid) {
   display: block;
   opacity: 0;
   animation-name: fadeIn;
@@ -260,7 +251,7 @@ button[type=submit].active:hover{
   }
 }
 
-.requiredTextArea{
+.requiredTextArea:not(.valid){
   color: #E61C40;
   position: relative;
   bottom: 30px;
@@ -269,7 +260,8 @@ button[type=submit].active:hover{
   
 }
 
-input:focus-visible, textarea:focus-visible {
+
+input:focus-visible:not(.valid), textarea:focus-visible:not(.valid) {
   outline: none;
   border: 1px solid #E61C40 !important;
   caret-color: white ;

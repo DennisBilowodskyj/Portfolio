@@ -35,18 +35,15 @@ contactForm: any;
 inputValid: boolean = false;
 
 requiredName(){
-  if (!this.name){
+  if (!this.contactData.name){
     this.showName = true;
   } else {
     this.showName = false;
   }
 }
 onChangeInput(): void {
-  if (this.inputValid) {
-    this.inputValid = true; 
-  } else {
-    this.inputValid = false;
-  }
+  const trimmedName = this.contactData.name.trim();
+  this.inputValid = trimmedName.length >= 3;
 }
   
   
