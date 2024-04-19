@@ -1,20 +1,13 @@
 import { CommonModule, } from '@angular/common';
 import { Component, inject, } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import {NgForm} from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
-import {
-  AbstractControl,
-  FormBuilder,
-  FormGroup,
-  FormControl,
-  Validators,
-} from '@angular/forms';
 
 @Component({
   selector: 'app-contact-section',
   standalone: true,
-  imports: [FormsModule, CommonModule, ReactiveFormsModule],
+  imports: [FormsModule, CommonModule],
   templateUrl: './contact-section.component.html',
   styleUrl: './contact-section.component.scss'
 })
@@ -30,7 +23,6 @@ text: any;
 showEmail: boolean = false;
 email: string = '';
 isChecked:boolean = false;
-acceptTerms = new FormControl(false);
 contactForm: any;
 inputValid: boolean = false;
 
