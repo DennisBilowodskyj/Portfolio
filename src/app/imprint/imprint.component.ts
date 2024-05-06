@@ -9,6 +9,10 @@ import { CommonModule } from '@angular/common';
   styleUrl: './imprint.component.scss'
 })
 export class ImprintComponent {
- 
+  showImprint = false;
+
+  openImprint(){
+    this.showImprint = true;
+  }
   }
 

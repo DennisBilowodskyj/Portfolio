@@ -19,5 +19,5 @@ import { CommonModule } from '@angular/common';
 })
 export class AppComponent {
   title = 'Portfolio';
-showImprint: any;
+
 }
