@@ -3,8 +3,9 @@
     <h2>Contact</h2>
     <div class="line"></div>
   </div>
-  <div>
+  <div class="d-flex">
     <div class="lineSpan"></div>
+    <div>
     <div class="spanContainer">
       <span class="firstSpan">Got a problem to solve?</span>
       <span class="secondSpan">
@@ -17,79 +18,113 @@
       </span>
     </div>
   </div>
-  <div class="purpleShadow">
-    <img src="../../assets/img/Purple shadow 2.png" />
-  </div>
+  
   <div class="contactFormContainer">
-    <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
-      <label for="fname"></label>
+    <form (submit)="sendMail()" #myForm="ngForm">
+      <label for="name"></label>
       <input
-        type="text"
-        placeholder="Your name"
+        #name="ngModel"
         required
-        (click)="requiredName()"
-        [(ngModel)]="contactData.name"
-        name="firstname"
-        (keyup)="onChangeInput()"
-        [ngClass]="{ clicked: showName, 'valid': inputValid }"
-        
-      />
-      <span class="requiredText" [hidden]="!showName" [ngClass]="{'show': showName}"
+        placeholder="Your name"
+        ngModel
+        name
+        type="text"
+        name="name"
+        [disabled]="isSending"
+        class="input"
+      />@if (!name.valid && name.touched && !name.disabled){
+      <span
+        class="requiredText"
+        [ngClass]="{ show: !name.valid && name.touched && !name.disabled }"
         >Your name is required
       </span>
-      <label for="mail"></label>
-      <input
-        type="email"
-        placeholder="Your email"
-        required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
-        (click)="requiredEmail()"
-        [(ngModel)]="email"
-        name="email"
-        [ngClass]="{ clicked: showEmail }"
-      />
-      <span class="requiredText" [hidden]="!showEmail" [ngClass]="{'show': showEmail}"
-        >Your email is required
-      </span>
+      }
 
-      <label for="subject"></label>
-      <textarea
-        id="subject"
-        name="subject"
-        placeholder="Your message"
+      <label for="email"></label>
+      <input
+        #email="ngModel"
+        type="email"
+        #name="ngModel"
         required
-        style="height: 200px"
-        type="text"
-        (click)="requiredTextMessage()"
-        [(ngModel)]="text"
-        [ngClass]="{ clicked: showText }"
-    
+        placeholder="Your email"
+        ngModel
+        name
+        type="email"
+        name="email"
+        [disabled]="isSending"
+        class="input"
+        pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+      />@if (!email.valid && email.touched && !email.disabled){
+      <span
+        class="requiredText"
+        [ngClass]="{ show: !email.valid && email.touched && !email.disabled }"
+        >Your email is required </span
+      >}
+
+      <label for="message"></label>
+      <textarea
+        #message="ngModel"
+        type="message"
+        required
+        placeholder="Your message"
+        ngModel
+        type="email"
+        name="message"
+        [disabled]="isSending"
+        class="textarea"
       >
-     
       </textarea>
-      <span class="requiredTextArea" [hidden]="!showText" [ngClass]="{'show': showText}">
-      Your message is empty
-    </span>
+      @if (!message.valid && message.touched && !message.disabled){
+      <span
+        class="requiredTextArea"
+        [ngClass]="{
+          show: !message.valid && message.touched && !message.disabled
+        }"
+      >
+        Your message is empty </span
+      >}
       <div class="privacyPolicyContainer">
         <div class="privacyPolicy">
           <label class="container">
-            <input type="checkbox" formControlName="acceptTerms" formControlName="acceptTerms" (change)="toggleCheckbox($event)" />
+            <input
+              type="checkbox"
+              name="privacyPolicy"
+              [(ngModel)]="privacyPolicyChecked"
+              required
+            />
             <span class="checkmark"></span>
           </label>
-          I've read the
-          <a href="#">privacy policy</a>
-          and agree to the processing of my data as outlined.
+          <p>I've read the
+          <a (click)="openPrivacyPolicy()">privacy policy</a>
+          and agree to the processing of my data as outlined.</p>
         </div>
-        <button type="submit" [ngClass]="{ 'active': isChecked }">Send message :)</button>
-        <!--<span class="requiredText" ngIf="!isButtonEnabled">Please accept the privacy policy.</span>-->
+        <button
+          #sendBtn
+          type="submit"
+          [disabled]="!myForm.valid || !privacyPolicyChecked"
+          [ngClass]="{
+          valid: myForm.valid && privacyPolicyChecked,
+          invalid: !myForm.valid || !privacyPolicyChecked
+          }"
+          [class.hidden]="isSending"
+        >
+          Send message :)
+        </button>
+        <span
+          class="requiredText"
+          *ngIf="myForm.submitted && !privacyPolicyChecked"
+          >Please accept the privacy policy.</span
+        >
       </div>
     </form>
     <a href="#" class="goUpButton">
-      <img src="../../assets/img/Property 1=Default.png" class="defaultImg">
-      <img src="../../assets/img/Property 1=Variant2.png" class="hoverImg">
-
+      <img src="../../assets/img/Property 1=Default.png" class="defaultImg" />
+      <img src="../../assets/img/Property 1=Variant2.png" class="hoverImg" />
     </a>
+  </div></div>
+  <div class="purpleShadow">
+    <img src="./assets/img/Purple shadow 2.png" />
   </div>
-  
-  </div>
-  
-
+</div>
+<div class="PrivacyOverlay" *ngIf="showPrivacyP">
+</div>

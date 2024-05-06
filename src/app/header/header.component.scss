@@ -1,37 +1,101 @@
-.headerContent{
-    background-color: #141D2F;
-    max-width: 1920px;
-    height: 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 999;
+.headerContent {
+  background-color: #141d2f;
+  max-width: 1920px;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
-.headerMenu{
-    margin: 100px;
-    font-size: 23px;
+.headerMenu {
+  margin: 100px;
+  font-size: 23px;
+  img{
+    width: 150px;
+  }
 
-    span{
-       color: white;
-    }
-   
+  span {
+    color: white;
+  }
 }
 
-.headerMenu{
+.headerMenu {
+  display: flex;
+  margin: 100px;
+  gap: 29px;
+  a {
+    color: white;
+    text-decoration: none;
+    transition: color 100ms ease-in-out;
+  }
+  & a:hover {
+    color: #70e61c;
+    text-decoration: underline;
+    text-decoration-color: #9747ff;
+    text-decoration-thickness: 3px;
+  }
+}
+
+.burgerMenuResponsive {
+  display: none;
+}
+
+@media screen and (max-width: 880px) {
+  .burgerMenuResponsive {
     display: flex;
-    margin: 100px;
+    position: absolute;
+    right: 5%;
+  }
+
+  .headerMenu {
+    position: absolute;
+    left: -5%;
+  }
+
+  .headerMenu a {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .headerMenu {
+    left: -10%;
+  }
+  .burgerMenuResponsive{
+    right: 10%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .headerMenu {
+    left: -15%;
+  }
+  .burgerMenuResponsive{
+    right: 10%;
+  }
+}
+
+.overlay {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #414856; 
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  div{
+    display: flex;
+    flex-direction: column;
     gap: 29px;
-        a{
-            color: white;
-            text-decoration: none;
-            transition: color 100ms ease-in-out
-        }
-        & a:hover{
-            color: #70E61C;
-            text-decoration: underline;
-            text-decoration-color: #9747FF;
-            text-decoration-thickness: 3px;
-        }
-}   
+  }
+  a{
+    color: white;
+    text-decoration: none;
+    font-size: 23px;
+    font-weight: 400;
+  } 
+}

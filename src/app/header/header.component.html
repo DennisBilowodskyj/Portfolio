@@ -1,13 +1,21 @@
-   <div class="headerContent">
-    <div class="headerMenu">
-        <img src="./assets/img/Logo.png">
-    </div>
-    <div class="headerMenu">
-        <a href="#aboutme">About me</a>
-        <a href="#skills">Skills</a>
-        <a href="#portfolio">Portfolio</a>
-
-    </div>
-
-
-   </div> 
+<div class="headerContent">
+  <div class="headerMenu">
+    <img src="../../assets/img/1-AnyEraser.png" />
+  </div>
+  <div class="headerMenu">
+    <a href="#aboutme">About me</a>
+    <a href="#skills">Skills</a>
+    <a href="#portfolio">Portfolio</a>
+  </div>
+  <div class="burgerMenuResponsive" (click)="openBurgerMenu()">
+    <img src="../../assets/img/burgerMenu.png" />
+  </div>
+</div>
+<div class="overlay" *ngIf="showBurgerMenu">
+  <div>
+    <a href="#aboutme" (click)="closeBurgerMenu()">About me</a>
+    <a href="#skills" (click)="closeBurgerMenu()">Skills</a>
+    <a href="#portfolio" (click)="closeBurgerMenu()">Portfolio</a>
+    <a href="#contact" (click)="closeBurgerMenu()">Contact</a>
+  </div>
+</div>

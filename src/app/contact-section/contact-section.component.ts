@@ -1,9 +1,7 @@
-import { CommonModule, } from '@angular/common';
-import { Component, inject, } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import {NgForm} from '@angular/forms';
+import { Component, ViewChild, NgModule,} from '@angular/core';
+import { FormsModule, NgForm  } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
-
+import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-contact-section',
   standalone: true,
@@ -13,64 +11,54 @@ import { HttpClient } from '@angular/common/http';
 })
 
 export class ContactSectionComponent {
+@ViewChild('myForm') myForm?: NgForm;
+isSending = false;
+emailSent = false;
+isError = false;
+privacyPolicyChecked: any;
+showPrivacyP = false
 
-http = inject(HttpClient);  
+/*http = inject(HttpClient);*/
 
-name: string = '';
-showName: boolean = false;
-showText: any;
-text: any;
-showEmail: boolean = false;
-email: string = '';
-isChecked:boolean = false;
-contactForm: any;
-inputValid: boolean = false;
-
-requiredName(){
-  if (!this.contactData.name){
-    this.showName = true;
-  } else {
-    this.showName = false;
-  }
-}
-onChangeInput(): void {
-  const trimmedName = this.contactData.name.trim();
-  this.inputValid = trimmedName.length >= 3;
-}
-  
-  
-  
-
-requiredEmail() {
-  if (!this.email){
-    this.showEmail = true;
-  } else {
-    this.showEmail = false;
-  }
-}
-
-requiredTextMessage(){
-  if (!this.text){
-    this.showText = true;
-  } else {
-    this.showText = false;
+async sendMail(){
+  let contactMail = new FormData();
+  contactMail.append('name', this.myForm?.value.name);
+  contactMail.append('email', this.myForm?.value.email);
+  contactMail.append('message', this.myForm?.value.message);
+  this.isSending = true;
+  try {
+    await fetch ('https://dennis-bilowodskyj.com/sendMail.php',{
+      method: 'POST',
+      body: contactMail
+    });
+    this.emailSent = true;
+    this.myForm?.resetForm();
+  } catch (error){
+    this.isSending = false;
+    this.isError = true;
+  } finally{
+    setTimeout(() =>{
+      this.isSending = false;
+      this.emailSent = false;
+      this.isError = false;
+    },3000)
   }
 }
 
-toggleCheckbox(event: any) {
-  this.isChecked=(event.target.checked);
+openPrivacyPolicy(){
+  this.showPrivacyP = true;
 }
 
 
 
 
-contactData = {
-  name: "",
-  email: "",
-  message: "",
-}
 
-mailTest = false;
+
+
+
+
+
+/*mailTest = false;
 
   post = {
     endPoint: 'https://dennis-bilowodskyj.com/sendMail.php',
@@ -104,4 +92,9 @@ onSubmit(ngForm: NgForm) {
   }
  
 }
+  contactData(contactData: any): any {
+    throw new Error('Method not implemented.');
+  }
+  */
 }
+

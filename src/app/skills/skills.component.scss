@@ -1,116 +1,247 @@
-.skillContent{
-    max-width: 1920px;
-    img{
-        position: absolute;
-        width: 100%;
-        top: 1500px;
-    }
-}
-.background{
-    background-color: #141D2F;
-    max-width: 1920px;
-    height: 790px;
-}
-.skillIcons{
-    z-index: 1;
-    display: flex;
+.skillContent {
+  max-width: 1920px;
+  img {
     position: absolute;
-    flex-direction: column; 
-    gap: 80px;
-    margin-left: 100px; 
+    width: 100%;
+    top: 1500px;
+  }
 }
-.display-flex{
-    display: flex; 
+.background {
+  background-color: #141d2f;
+  max-width: 1920px;
+  height: 790px;
+}
+.skillIcons {
+  z-index: 1;
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  gap: 80px;
+  margin-left: 25px;
+  padding: 6rem 0rem;
+}
+.display-flex {
+  display: flex;
+  gap: 10px;
+  figure {
+    display: flex;
     gap: 10px;
-    figure{
-        display: flex;
-        gap: 10px;
-        color: white;
-        flex-direction: column;
-        align-items: center;
-        width: 88px;
-        height: 100px;
-        text-align: center;
-    }
-    img{
-        width: 56px;
-        height: 60px;
-            }
-    figcaption{
-        font-size: 16px;
+    color: white;
+    flex-direction: column;
+    align-items: center;
+    width: 88px;
+    height: 100px;
+    text-align: center;
+  }
+  img {
+    width: 56px;
+    height: 60px;
+  }
+  figcaption {
+    font-size: 16px;
     font-weight: 700;
     line-height: 19px;
-    }
+  }
 }
 
-.skillTextBox{
-    width: 572px;
-    height: 286px;
-    position: absolute;
-    display: flex;
-    color: white;
-    right: 0;
-    margin-top: 170px;
-    flex-direction: column;
-    gap: 35px;
-    h2{
-        font-weight: 700;
-        font-size: 90px;
-        line-height: 108px;
-        height: 35px;
-    }
-    p{
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 19px;
-    }
+.skillTextBox {
+  width: 572px;
+  height: 286px;
+  position: absolute;
+  display: flex;
+  color: white;
+  right: 0;
+  margin-top: 170px;
+  flex-direction: column;
+  gap: 35px;
+  h2 {
+    font-weight: 700;
+    font-size: 90px;
+    line-height: 108px;
+    height: 35px;
+  }
+  p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+  }
 }
-.btn{
-    display: flex;
-    margin-top: 10px;
-    a{
-        padding: 15px 30px;
-        text-decoration: none;
-        background-color: #70e61c;
-        border-radius: 10px;
-        color: #FFFFFF;
-        font-size: 23px;
-        font-weight: 400;
-        transition: background-color 100ms ease-in-out, padding 100ms ease-in-out;      
-        }
-    & :hover{
-        background-color: #9747FF;
-        padding: 20px 40px;
-        }
+.btn {
+  display: flex;
+  margin-top: 10px;
+  a {
+    padding: 15px 30px;
+    text-decoration: none;
+    background-color: #70e61c;
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 23px;
+    font-weight: 400;
+    transition: background-color 100ms ease-in-out, padding 100ms ease-in-out;
+  }
+  & :hover {
+    background-color: #9747ff;
+    padding: 20px 40px;
+  }
 }
-.line{
-    width: 289px;
-    height: 4px;
-    background-color: #1CDAE6;
-    position: absolute;
-    right: 0;    
-    margin-top: 130px;
-    border-radius: 10px 0px 0px 10px;
+.line {
+  width: 289px;
+  height: 4px;
+  background-color: #1cdae6;
+  position: absolute;
+  right: 0;
+  margin-top: 130px;
+  border-radius: 10px 0px 0px 10px;
 }
 
 .display-flex figure:hover {
-    animation: vibrate 0.5s linear infinite;
+  animation: vibrate 0.5s linear infinite;
+}
+
+@keyframes vibrate {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(2px);
+  }
+  50% {
+    transform: translateX(-2px);
+  }
+  75% {
+    transform: translateX(2px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .skillIcons {
+    gap: 70px;
+  }
+
+  .display-flex {
+    gap: unset;
+    figure {
+      width: 77px;
+      height: 50px;
+    }
+    img {
+      width: 45px;
+      height: 45px;
+    }
+  }
+
+  .skillTextBox {
+    width: 358px;
+    gap: 25px;
+    h2 {
+      position: relative;
+      right: 10%;
+      font-size: 70px;
+    }
+    p {
+      position: relative;
+      right: 10%;
+    }
+
+    .line {
+      width: 180px;
+      margin-top: 115px;
+    }
+  }
+  .btn{
+    position: relative;
+    /*right: 10%;*/
+  }
+}
+
+@media screen and (max-width: 880px) {
+
+    .background{
+        height: 1200px;
+    }
+    .skillTextBox {
+        width: 100%;
+        margin-top: 100px;
+        h2{
+          left: 5%;
+          width: fit-content;
+        }
+        line{
+          width: 300px;
+        }
+        p{
+          display: flex;
+          text-align: left;
+          margin-left: 5%;
+          right: unset;
+        }
+    }
+    .btn{
+      justify-content: center;
+      /*left: 5%;*/
+      margin-top: 600px;
+    }
+
+    .skillIcons[_ngcontent-ng-c2390456407] {
+        gap: 70px;
+        margin-top: 370px;
+        margin-left: unset;
+    }
+}
+
+@media screen and (max-width: 630px) {
+  .display-flex{
+    figure{
+      width: 50px;
+    }
   }
   
-  @keyframes vibrate {
-    0% {
-      transform: translateX(0);
-    }
-    25% {
-      transform: translateX(2px);
-    }
-    50% {
-      transform: translateX(-2px);
-    }
-    75% {
-      transform: translateX(2px);
-    }
-    100% {
-      transform: translateX(0);
+
+.skillIcons{
+  margin-left: unset;
+  scale: 0.9;
+}
+}
+@media screen and (max-width: 520px) {
+  .display-flex{
+    figure{
+      width: 22px;
     }
   }
+  
+  
+   
+}
+
+
+@media screen and (max-width: 390px) {
+  .display-flex{
+    /*position: relative;
+    left: 5%;*/
+    figure{
+      width: 22px;
+    }
+  }
+  .skillIcons{
+    margin-left: -45px !important;
+    transform: scale(0.8);
+  }
+
+  .skillTextBox {
+    
+    h2{
+      font-size: 45px;
+      top: 25px;
+      width: fit-content;
+    }
+    line{
+      width: 170px;
+    }
+    
+}
+}
+
+

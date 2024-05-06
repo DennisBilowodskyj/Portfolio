@@ -3,7 +3,7 @@
   height: 291px;
   background-color: #141d2f;
   position: relative;
-  z-index: 0;
+  z-index: 999;
 }
 
 .line {
@@ -12,15 +12,23 @@
 
 .footerDisplayFlex {
   display: flex;
+  /* margin-top: 50px; */
   justify-content: space-around;
   align-items: center;
-  margin-top: 121px;
-  span {
-    color: white;
-    font-weight: 400;
-    font-size: 23px;
-    line-height: 27px;
-  }
+  transform: translate(-50%, -50%);
+  position: relative;
+  left: 50%;
+  top: 50%;
+}
+span {
+  color: white;
+  font-weight: 400;
+  font-size: 23px;
+  line-height: 27px;
+}
+
+.footerDisplayFlex .first-img {
+  width: 200px;
 }
 .iconLink {
   display: flex;
@@ -33,21 +41,64 @@
 }
 
 .imprint {
-  position: absolute;
-  left: 148px;
+  display: flex;
+  flex-direction: column;
 
   a {
     font-size: 16px;
     color: white;
     font-weight: 400;
     text-decoration: none;
-
+    position: relative;
+    bottom: 70px;
+    cursor: pointer;
   }
-  & a:hover{
-    color: #70E61C;
+  & a:hover {
+    color: #70e61c;
     text-decoration: underline;
-    text-decoration-color: #9747FF;
+    text-decoration-color: #9747ff;
     text-decoration-thickness: 3px;
+  }
+}
 
+.imprintOverlay{
+  position: fixed;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #141d2f; 
+  color: white;
+  z-index: 2;
+  top: 100px;
+}
+
+@media screen and (max-width: 768px) {
+  .footer{
+    height: 500px;
+  }
+  .footerDisplayFlex {
+    flex-direction: column;
+    align-items: center;
+    top:40%;
+    span {
+      top: -75px;
+      position: relative;
+    }
+  }
+  .footerDisplayFlex .first-img {
+    width: 280px;
+  }
+
+  .imprint {
+    align-items: center;
+    a {
+      top: 100px;
+    }
+  }
+
+  .iconLink {
+    
+    position: relative;
+    margin-top: -35px;
 }
 }

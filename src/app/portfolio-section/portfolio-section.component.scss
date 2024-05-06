@@ -13,6 +13,7 @@
     line-height: 108px;
     margin-left: 100px;
     height: 35px;
+    padding: 1rem;
   }
   p {
     font-weight: 400;
@@ -21,6 +22,7 @@
     width: 473px;
     height: 38px;
     margin-left: 99px;
+    z-index: 2;
   }
 }
 
@@ -49,7 +51,7 @@
   border-radius: 15px;
   border-color: #70e61c;
   overflow: hidden;
-  background-color: #141D2F;
+  background-color: #141d2f;
 }
 
 .imgPolloLoco:hover .d-none {
@@ -65,7 +67,6 @@
   opacity: 0.5;
   transform: scale(1.55) translateX(10px) translateY(-40px) !important;
 }
-
 
 .d-none {
   display: none;
@@ -161,13 +162,276 @@
   top: -125px;
   left: 0;
   z-index: -1;
-  
 }
 
-.blueShadow{
+.blueShadow {
   position: absolute;
   right: 0;
   top: -500px;
   z-index: -1;
 }
 
+@media screen and (max-width: 1330px) {
+  .imgPolloLoco {
+    width: 500px;
+    height: 500px;
+    display: flex;
+  }
+  .d-none {
+    width: 500px;
+    height: 300px;
+    top: 200px;
+  }
+  .display-flex {
+    h3 {
+      margin-top: 30px;
+    }
+    div {
+      margin-top: 0px;
+    }
+  }
+  .btnContainer {
+    margin-left: 70px;
+    margin-top: 100px;
+  }
+
+  .imgPolloLoco:hover .imgPolloLocoImage {
+    transform: scale(1.55) translateX(5px) translateY(-35px) !important;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .imgPolloLoco {
+    width: 400px;
+    height: 400px;
+  }
+  .imgPolloLoco:hover .imgPolloLocoImage {
+    transform: scale(1.55) translateX(5px) translateY(-26px) !important;
+  }
+
+  .d-none {
+    width: 400px;
+    height: 250px;
+    top: 150px;
+  }
+  .display-flex {
+    h3 {
+      font-size: 23px;
+    }
+    div {
+      font-size: 16px;
+    }
+    p {
+      font-size: 16px;
+    }
+  }
+  .btnContainer {
+    margin-left: 10px;
+    margin-top: 80px;
+  }
+}
+
+@media screen and (max-width: 880px) {
+   .Epl{
+    top: 265px !important;
+  }
+  .blueShadow {
+    top: -280px;
+  }
+  .greenShadow {
+    top: 460px;
+  }
+
+  .imgContent {
+    height: unset;
+    flex-direction: column;
+    align-items: center;
+  }
+  .imgPolloLoco {
+    width: 600px;
+    height: 600px;
+  }
+  .textBox {
+    h2 {
+      font-size: 45px;
+    }
+  }
+  .line {
+    bottom: 90px;
+  }
+
+  .imgPolloLoco:hover .imgPolloLocoImage {
+    transform: scale(1.55) translateX(5px) translateY(-40px) !important;
+  }
+
+  .d-none {
+    width: 600px;
+    height: 335px;
+    top: 900px;
+  }
+  .display-flex {
+    h3 {
+      font-size: 32px;
+      margin-top: 50px;
+    }
+    div {
+      font-size: 23px;
+      margin-top: 30px;
+    }
+    p {
+      font-size: 23px;
+      margin-top: 40px;
+    }
+  }
+  .btnContainer {
+    margin-left: 100px;
+    margin-top: 140px;
+  }
+}
+@media screen and (max-width: 680px) {
+  .Epl{
+    top: 200px !important;
+  }
+  .textBox {
+    p {
+      width: 340px;
+      margin-left: 30px;
+    }
+    h2 {
+      margin-left: 30px;
+      width: fit-content;
+    }
+  }
+
+  .line {
+    width: 20px;
+  }
+  .imgPolloLoco {
+    width: 500px;
+    height: 500px;
+  }
+  .greenShadow {
+    top: 330px;
+  }
+
+  .greenShadow {
+    top: -35px;
+  }
+  .btnContainer {
+    margin-left: 60px;
+    margin-top: 100px;
+  }
+
+  .d-none {
+    top: 736px;
+    width: 500px;
+    height: 300px;
+  }
+  .display-flex {
+    h3 {
+      margin-top: 10px;
+    }
+    div {
+      margin-top: 0px;
+    }
+    p {
+      margin-top: 40px;
+    }
+  }
+
+  .imgPolloLoco:hover .imgPolloLocoImage {
+    transform: scale(1.55) translateX(5px) translateY(-32px) !important;
+  }
+}
+
+@media screen and (max-width: 570px) {
+
+  .Epl{
+    top: 181px !important;
+  }
+  .imgPolloLoco {
+    width: 400px;
+    height: 400px;
+  }
+  .greenShadow {
+    top: 410px;
+    img {
+      width: 246px;
+      height: 547px;
+    }
+  }
+  .btnContainer {
+    margin-left: 10px;
+    
+  }
+
+  .d-none {
+    top: 616px;
+    width: 400px;
+    height: 220px;
+  }
+  .display-flex {
+    h3 {
+      font-size: 23px;
+      margin-top: 10px;
+    }
+    div {
+      font-size: 16px;
+      margin-top: 0px;
+    }
+    p {
+      font-size: 16px;
+      margin-top: 20px;    
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .Epl{
+    top: 121px !important;
+  }
+  .textBox p {
+    width: 270px;
+  }
+  .imgPolloLoco {
+    width: 300px;
+    height: 300px;
+  }
+  .greenShadow {
+    top: -35px;
+  }
+  .btnContainer {
+    margin-left: 15px;
+    margin-top: 50px;
+    gap: 33px;
+  }
+  .btnGit a{
+    font-size: 16px;
+  }
+.btnLive a{
+  font-size: 16px;
+}
+  .d-none {
+    top: 455px;
+    width: 300px;
+    height: 180px;
+  }
+  .display-flex {
+    h3 {
+      margin-top: 10px;
+    }
+    div {
+      margin-top: -20px;
+      line-height: 19px;
+    }
+    p {
+      margin-top: 15px;
+      line-height: 19px;
+
+    }
+  }
+
+  .imgPolloLoco:hover .imgPolloLocoImage {
+    transform: scale(1.55) translateX(5px) translateY(-40px) !important;
+  }
+}
