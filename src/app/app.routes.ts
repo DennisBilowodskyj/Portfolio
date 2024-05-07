@@ -1,11 +1,9 @@
-import { Routes } from '@angular/router';
-import { AboutMeComponent } from './about-me/about-me.component';
-import { SkillsComponent } from './skills/skills.component';
+import { Routes} from '@angular/router';
 import { ImprintComponent } from './imprint/imprint.component';
+import { MainContentComponent } from './main-content/main-content.component';
 
 export const routes: Routes = [
-    { path: 'aboutme', component: AboutMeComponent },
-    { path: 'skills', component: SkillsComponent },
+    { path: '', component: MainContentComponent },
     { path: 'imprint', component: ImprintComponent }
 
 ];
