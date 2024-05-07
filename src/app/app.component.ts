@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule, RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { AboveTheFoldComponent } from './above-the-fold/above-the-fold.component';
 import { AboutMeComponent } from './about-me/about-me.component';
@@ -13,7 +13,7 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule,RouterOutlet, HeaderComponent,AboveTheFoldComponent, AboutMeComponent, SkillsComponent, PortfolioSectionComponent, ContactSectionComponent, FooterComponent, ImprintComponent],
+  imports: [CommonModule,RouterOutlet,RouterModule, HeaderComponent,AboveTheFoldComponent, AboutMeComponent, SkillsComponent, PortfolioSectionComponent, ContactSectionComponent, FooterComponent, ImprintComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
