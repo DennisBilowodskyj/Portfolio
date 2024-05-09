@@ -1,0 +1,16 @@
+.imprintOverlay{
+    background-color: #141d2f;
+    color: white;
+    max-width: 1920px;
+    display: flex;
+    text-align: center;
+    img{
+        position: absolute;
+    left: 5%;
+    top: 5%;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+    }
+}

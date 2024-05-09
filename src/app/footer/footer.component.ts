@@ -11,11 +11,7 @@ import { RouterLink } from '@angular/router';
 })
 export class FooterComponent {
 
-  showImprint = false;
-
-  openImprint(){
-    this.showImprint = true;
-  }
+  
   }
 
 

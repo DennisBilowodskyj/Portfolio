@@ -3,15 +3,46 @@ import { RouterLink, RouterModule, RouterOutlet } from '@angular/router';
 import { ImprintComponent } from './imprint/imprint.component';
 import { CommonModule } from '@angular/common';
 import { MainContentComponent } from './main-content/main-content.component';
+import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './header/header.component';
+import { TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule,RouterOutlet,RouterModule,MainContentComponent, ImprintComponent,RouterLink],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
+  imports: [
+    CommonModule,
+    RouterOutlet,
+    RouterModule,
+    MainContentComponent,
+    ImprintComponent,
+    RouterLink,
+    FooterComponent,
+    HeaderComponent,
+    TranslateModule,
+    TranslateHttpLoader,
+  ],
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 export class AppComponent {
   title = 'Portfolio';
-
 }

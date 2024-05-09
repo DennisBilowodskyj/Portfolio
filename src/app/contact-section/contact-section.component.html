@@ -95,7 +95,7 @@
             <span class="checkmark"></span>
           </label>
           <p>I've read the
-          <a (click)="openPrivacyPolicy()">privacy policy</a>
+          <a routerLink="./imprint">privacy policy</a>
           and agree to the processing of my data as outlined.</p>
         </div>
         <button
@@ -125,6 +125,4 @@
   <div class="purpleShadow">
     <img src="./assets/img/Purple shadow 2.png" />
   </div>
-</div>
-<div class="PrivacyOverlay" *ngIf="showPrivacyP">
 </div>

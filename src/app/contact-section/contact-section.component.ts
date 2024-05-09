@@ -2,10 +2,12 @@ import { Component, ViewChild, NgModule,} from '@angular/core';
 import { FormsModule, NgForm  } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
+
 @Component({
   selector: 'app-contact-section',
   standalone: true,
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule, CommonModule,RouterLink],
   templateUrl: './contact-section.component.html',
   styleUrl: './contact-section.component.scss'
 })
