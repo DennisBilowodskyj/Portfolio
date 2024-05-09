@@ -3,9 +3,12 @@
     <img src="../../assets/img/1-AnyEraser.png" />
   </div>
   <div class="headerMenu">
-    <a href="#aboutme">About me</a>
+    <a href="#aboutme">{{ 'Aboutme' | translate }}</a>
     <a href="#skills">Skills</a>
     <a href="#portfolio">Portfolio</a>
+    <a (click)="switchLanguage('en')">EN</a> 
+    <a (click)="switchLanguage('de')">DE</a>
+
   </div>
   <div class="burgerMenuResponsive" (click)="openBurgerMenu()">
     <img src="../../assets/img/burgerMenu.png" />
