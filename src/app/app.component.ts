@@ -7,7 +7,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-
+import {HttpClientModule, HttpClient} from '@angular/common/http';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -22,16 +22,24 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
     RouterLink,
     FooterComponent,
     HeaderComponent,
-    TranslateModule,
-    TranslateHttpLoader,
-  ],
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateHttpLoader,
+        useFactory: translateHttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    })],
+      ]
 })
 
 
 
 
 
-
+export function translateHttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
 
 
 
