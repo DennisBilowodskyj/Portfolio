@@ -7,14 +7,13 @@
     <div class="lineSpan"></div>
     <div>
     <div class="spanContainer">
-      <span class="firstSpan">Got a problem to solve?</span>
+      <span class="firstSpan"> {{ 'contactHeadline' | translate }}</span>
       <span class="secondSpan">
-        Contact me through this form, I am interested in hearing<br />
-        from you, knowing your ideas and contributing to your <br />projects
-        with my work.
+        {{ 'contactText1' | translate }}<br />
+        {{ 'contactText2' | translate }} <br /> {{ 'contactText3' | translate }}
       </span>
       <span class="thirdSpan"
-        >Need a Frontend developer? <span class="lastSpan">Contact me!</span>
+        > {{ 'contactText4' | translate }} <span class="lastSpan"> {{ 'contactText5' | translate }}</span>
       </span>
     </div>
   </div>
@@ -25,7 +24,7 @@
       <input
         #name="ngModel"
         required
-        placeholder="Your name"
+        placeholder="{{ 'yourName' | translate }}"
         ngModel
         name
         type="text"
@@ -36,7 +35,7 @@
       <span
         class="requiredText"
         [ngClass]="{ show: !name.valid && name.touched && !name.disabled }"
-        >Your name is required
+        >{{ 'requiredName' | translate }}
       </span>
       }
 
@@ -46,7 +45,7 @@
         type="email"
         #name="ngModel"
         required
-        placeholder="Your email"
+        placeholder="{{ 'yourEmail' | translate }}"
         ngModel
         name
         type="email"
@@ -58,7 +57,7 @@
       <span
         class="requiredText"
         [ngClass]="{ show: !email.valid && email.touched && !email.disabled }"
-        >Your email is required </span
+        >{{ 'requiredEmail' | translate }}</span
       >}
 
       <label for="message"></label>
@@ -66,7 +65,7 @@
         #message="ngModel"
         type="message"
         required
-        placeholder="Your message"
+        placeholder="{{ 'yourMessage' | translate }}"
         ngModel
         type="email"
         name="message"
@@ -81,7 +80,7 @@
           show: !message.valid && message.touched && !message.disabled
         }"
       >
-        Your message is empty </span
+      {{ 'requiredMessage' | translate }} </span
       >}
       <div class="privacyPolicyContainer">
         <div class="privacyPolicy">
@@ -94,9 +93,10 @@
             />
             <span class="checkmark"></span>
           </label>
-          <p>I've read the
-          <a routerLink="./imprint">privacy policy</a>
-          and agree to the processing of my data as outlined.</p>
+          <p> {{ 'privacyPolicy1' | translate }}
+          <a routerLink="./imprint"> {{ 'privacyPolicy2' | translate }}</a>
+          {{ 'privacyPolicy3' | translate }}<br>
+          {{ 'privacyPolicy4' | translate }}</p>
         </div>
         <button
           #sendBtn
@@ -108,12 +108,12 @@
           }"
           [class.hidden]="isSending"
         >
-          Send message :)
+        {{ 'sendMessage' | translate }}
         </button>
         <span
           class="requiredText"
           *ngIf="myForm.submitted && !privacyPolicyChecked"
-          >Please accept the privacy policy.</span
+          > {{ 'requiredPolicy' | translate }}</span
         >
       </div>
     </form>

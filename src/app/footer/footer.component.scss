@@ -50,7 +50,7 @@ span {
     font-weight: 400;
     text-decoration: none;
     position: relative;
-    bottom: 70px;
+    bottom: 60px;
     cursor: pointer;
   }
   & a:hover {
@@ -59,6 +59,10 @@ span {
     text-decoration-color: #9747ff;
     text-decoration-thickness: 3px;
   }
+}
+.logo{
+  position: relative !important;
+    bottom: -25px !important;
 }
 
 .imprintOverlay{
@@ -87,6 +91,8 @@ span {
   }
   .footerDisplayFlex .first-img {
     width: 280px;
+    position: relative;
+    bottom: 100px;
   }
 
   .imprint {

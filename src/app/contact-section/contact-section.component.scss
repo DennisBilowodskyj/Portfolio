@@ -1,10 +1,14 @@
 .contactSection {
   background-color: #141d2f;
+  max-width: 1920px;
+  z-index: 0;
+  position: relative;
 }
 .headline {
   display: flex;
   position: relative;
   margin-left: 42%;
+  padding: 1rem 0rem;
   h2 {
     font-weight: 700;
     font-size: 90px;
@@ -278,7 +282,8 @@ textarea:focus-visible:not(.valid) {
 
 .purpleShadow {
   position: absolute;
-  top: 3900px;
+  bottom: -18rem;
+  z-index: -1;
   right: 0;
 }
 
@@ -395,9 +400,7 @@ textarea:focus-visible:not(.valid) {
   .privacyPolicyContainer{
     position: initial;
   }
-  .purpleShadow {
-    top: 4900px;
-  }
+  
   .headline {
     margin-left: 25%;
   }
@@ -411,9 +414,7 @@ textarea:focus-visible:not(.valid) {
   .contactFormContainer{
     height: 710px;
   }
-  .purpleShadow {
-    top: 5280px;
-}
+ 
 .goUpButton{
   right: -2%;
   margin-top: 600px;
@@ -431,7 +432,7 @@ textarea:focus-visible:not(.valid) {
     margin-top: 115px;
   }
   .purpleShadow {
-    top: 5130px;
+    bottom: -2rem;
     img {
       width: 238px;
       height: 395px;
@@ -485,4 +486,6 @@ textarea:focus-visible:not(.valid) {
     right: 5%;
     margin-top: 470px;
   }
+
+  
 }

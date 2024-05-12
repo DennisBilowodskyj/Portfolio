@@ -1,9 +1,11 @@
 <div class="headerContent">
   <div class="headerMenu">
+    <a href="#">
     <img src="../../assets/img/1-AnyEraser.png" />
+  </a>
   </div>
   <div class="headerMenu">
-    <a href="#aboutme">{{ 'Aboutme' | translate }}</a>
+    <a href="#aboutme">About me</a>
     <a href="#skills">Skills</a>
     <a href="#portfolio">Portfolio</a>
     <a (click)="switchLanguage('en')">EN</a> 
@@ -16,6 +18,7 @@
 </div>
 <div class="overlay" *ngIf="showBurgerMenu">
   <div>
+
     <a href="#aboutme" (click)="closeBurgerMenu()">About me</a>
     <a href="#skills" (click)="closeBurgerMenu()">Skills</a>
     <a href="#portfolio" (click)="closeBurgerMenu()">Portfolio</a>

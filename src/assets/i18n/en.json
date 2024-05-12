@@ -1,3 +1,52 @@
 {
-    "Aboutme": "About me"
+    "aboutmeP1": "Hi, I'm a front-end developer from near Bonn. The world of programming fascinated me through my passion for gaming and made me choose this path.",
+    "aboutmeP2": "My thirst for knowledge is great and I am constantly learning. New technologies and challenges excite me and I am always motivated to apply my knowledge in practice. I see problems as an opportunity to develop creative solutions and make a difference together with others.",
+    "aboutmeP3": "With my passion for programming and my solution-orientated way of working, I would like to make a valuable contribution to your company. I am highly motivated to take on new challenges and continuously develop my knowledge.",
+    "skillText": "I have gained experience in building projects with various front end technologies and concepts.",
+    "portfolioHeadline": "Explore a selection of my work here - Interact with projects to see my skills in action.",
+    "EPL":"Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.",
+    "join": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+    "contactHeadline": "Got a problem to solve?",
+    "contactText1": "Contact me through this form, I am interested in hearing",
+    "contactText2": "from you, knowing your ideas and contributing to your",
+    "contactText3": "projects with my work.",
+    "contactText4": "Need a Frontend developer?",
+    "contactText5": "Contact me!",
+    "yourName": "Your name",
+    "yourEmail": "Your email",
+    "yourMessage": "Your message",
+    "requiredName":"Your name is required",
+    "requiredEmail":"Your email is required",
+    "requiredMessage":"Your message is empty",
+    "privacyPolicy1": "I've read the",
+    "privacyPolicy2": "privacy policy",
+    "privacyPolicy3": "and agree to the processing of my data as outlined.",
+    "sendMessage": "Send message :)",
+    "requiredPolicy": "Please accept the privacy policy.",
+    "imprint": "imprint",
+    "imprint1": "Information according to § 5 TMG",
+    "imprint2": "Represented by: ",
+    "imprint3": "Contact:",
+    "imprint4": "Phone: +49 (0) 1734783663",
+    "imprintText": "Liability for content",
+    "imprintText1": "The content of our website has been created with the greatest care. However, we cannot assume any liability for the accuracy, completeness, and topicality of the content. As a service provider, we are responsible for our own content on these pages in accordance with § 7 para. 1 TMG (German Telemedia Act) and general laws. According to §§ 8 to 10 TMG, however, we as a service provider are not obliged to monitor transmitted or stored third-party information or to investigate circumstances that indicate illegal activity. Obligations to remove or block the use of information in accordance with general legislation remain unaffected by this. However, liability in this respect is only possible from the time of knowledge of a specific infringement. As soon as we become aware of such infringements, we will remove this content immediately.",
+    "imprintText2": "Liability for links",
+    "imprintText3": "Our website contains links to external websites of third parties over whose content we have no influence. Therefore, we cannot accept any liability for this third-party content. The respective provider or operator of the pages is always responsible for the content of the linked pages. The linked pages were checked for possible legal violations at the time of linking. Illegal contents were not recognizable at the time of linking. However, permanent monitoring of the content of the linked pages is not reasonable without concrete evidence of an infringement. If we become aware of any legal infringements, we will remove such links immediately.",
+    "imprintText4": "Privacy policy",
+    "imprintText5": "The use of our website is generally possible without providing personal data. If personal data (e.g., name, address, or email addresses) is collected on our website, this is always done on a voluntary basis as far as possible. This data will not be passed on to third parties without your express consent.",
+    "imprintText6": "We would like to point out that data transmission over the Internet (e.g., when communicating by email) can have security gaps. Complete protection of data against access by third parties is not possible.",
+    "imprintText7": "We hereby expressly prohibit the use of contact data published within the scope of the imprint obligation by third parties for sending unsolicited advertising and information material. The operators of this website expressly reserve the right to take legal action in the event of the unsolicited sending of advertising information, such as spam emails.",
+    "imprintText8": "Website imprint created by",
+    "imprintText9": "from the"
+   
+
+
+
+
+
+
+
+
+
+
 }

@@ -3,11 +3,12 @@ import { FormsModule, NgForm  } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contact-section',
   standalone: true,
-  imports: [FormsModule, CommonModule,RouterLink],
+  imports: [FormsModule, CommonModule,RouterLink,TranslateModule],
   templateUrl: './contact-section.component.html',
   styleUrl: './contact-section.component.scss'
 })

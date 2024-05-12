@@ -21,7 +21,7 @@ export class HeaderComponent {
   showBurgerMenu = false;
 
 openBurgerMenu() {
-  this.showBurgerMenu = true;
+  this.showBurgerMenu = !this.showBurgerMenu;
 }
 
 closeBurgerMenu(){
