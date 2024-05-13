@@ -11,7 +11,7 @@ import { HeaderComponent } from "./header/header.component";
     standalone: true,
     templateUrl: './app.component.html',
     styleUrl: './app.component.scss',
-    imports: [CommonModule, RouterOutlet, RouterModule, MainContentComponent, ImprintComponent, RouterLink, FooterComponent, HeaderComponent]
+    imports: [CommonModule,RouterLink,RouterModule,RouterOutlet,  MainContentComponent, ImprintComponent,  FooterComponent, HeaderComponent]
 })
 export class AppComponent {
   title = 'Portfolio';

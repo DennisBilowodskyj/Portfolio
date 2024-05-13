@@ -30,14 +30,17 @@ async sendMail(){
   contactMail.append('message', this.myForm?.value.message);
   this.isSending = true;
   try {
-    await fetch ('https://dennis-bilowodskyj.com/sendMail.php',{
+    const response = await fetch ('https://dennis-bilowodskyj.com/sendMail.php',{
       method: 'POST',
       body: contactMail
     });
-    this.emailSent = true;
-    this.myForm?.resetForm();
+    if(response.ok){
+      this.emailSent = true;
+      this.myForm?.resetForm();
+    } else {
+      this.isError = true;
+    }
   } catch (error){
-    this.isSending = false;
     this.isError = true;
   } finally{
     setTimeout(() =>{
