@@ -1,11 +1,15 @@
 .aboveTheFoldContent {
   background-color: #141d2f;
   max-width: 1920px;
+  z-index: 1;
+  position: relative;
 }
 
 .firstImageSection {
   display: flex;
   justify-content: space-between;
+  position: relative;
+  z-index: -1;
 }
 
 .myName {

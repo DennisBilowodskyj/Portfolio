@@ -3,6 +3,7 @@
     max-width: 1920px;
     height: 870px;
     display: flex;
+    position: relative;
 }
 .aboutMe{
     width: 474px;
@@ -52,13 +53,12 @@
         width: 707px;
         height: 671px;
         position: absolute;
-        top: 1111px;
         right: 5%;
     }
     img:last-of-type{
         position: absolute;
         right: 6%;
-        top: 1090px;
+       
     }
 }
 
@@ -66,14 +66,12 @@
     .aboutMePhoto img:first-of-type{
         right: -3%;
         transform: scale(.75);
-        top: 1105px;
     }
 
     .aboutMePhoto img:last-of-type{
         right: -1%;
         left: unset;
         transform: scale(.8);
-        top: 1055px;
 }
 .aboutMe h1 {
     font-size: 70px;
@@ -94,13 +92,11 @@
     .aboutMePhoto img:first-of-type{
         right: -9.5%;
         transform: scale(0.7);
-        top: 1105px;
     }
 
     .aboutMePhoto img:last-of-type{
         right: -8%;
         left: unset;
-        top: 1055px;
         transform: scale(0.7);
 }
 }
@@ -116,13 +112,11 @@
 }
     .aboutMePhoto img:first-of-type{
         right: -12%;
-        top: 1015px;
     }
 
     .aboutMePhoto img:last-of-type{
         right: -10%;
         left: unset;
-        top: 1050px;
 }
         
     }
@@ -142,14 +136,12 @@
         }
     }
         .aboutMePhoto img:first-of-type{
-        top: 1000px;
         transform: translate(-50%);
         left: 50%;
         width: 500px;
         }
     
         .aboutMePhoto img:last-of-type{
-            top: 1000px;
             transform: translate(-50%);
             left: 50%;
             width: 550px;
@@ -166,13 +158,11 @@
         }
         
             .aboutMePhoto img:first-of-type{
-            top: 1000px;
             transform: translate(-50%) scale(0.7);
             left: 50%;
             }
         
             .aboutMePhoto img:last-of-type{
-                top: 1100px;
                 transform: translate(-50%) scale(0.8);
                 left: 50%;
                 width: 480px;
@@ -186,7 +176,6 @@
             }
         
             .aboutMePhoto img:first-of-type{
-            top: 1110px;
             transform: translate(-50%) scale(0.55);
             left: 50%;
             width: 580px;
@@ -194,7 +183,6 @@
             }
         
             .aboutMePhoto img:last-of-type{
-                top: 1110px;
                 width: 490px;
                 transform: translate(-50%) scale(0.65);
                 left: 50%;

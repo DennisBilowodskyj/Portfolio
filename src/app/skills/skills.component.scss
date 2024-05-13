@@ -3,6 +3,7 @@
   img {
     position: absolute;
     width: 100%;
+    max-width: 1920px;
     top: 1500px;
   }
 }
@@ -10,11 +11,13 @@
   background-color: #141d2f;
   max-width: 1920px;
   height: 790px;
+  display: flex;
+  justify-content: space-between;
 }
 .skillIcons {
   z-index: 1;
   display: flex;
-  position: absolute;
+  position: relative;
   flex-direction: column;
   gap: 80px;
   padding: 6rem 0rem;
@@ -46,18 +49,27 @@
 .skillTextBox {
   width: 572px;
   height: 286px;
-  position: absolute;
+  position: relative;
   display: flex;
   color: white;
   right: 0;
   margin-top: 170px;
   flex-direction: column;
   gap: 35px;
+  background-image: url('../../assets/img/LINE2.png');
+  background-position: 280px 130px;
+    background-repeat: no-repeat;
   h2 {
     font-weight: 700;
     font-size: 90px;
     line-height: 108px;
     height: 35px;
+  }
+  img{
+    width: 55%;
+    height: 4px;
+    margin-top: -85px;
+    margin-left: 45%;
   }
   p {
     font-weight: 400;
@@ -83,7 +95,7 @@
     padding: 20px 40px;
   }
 }
-.line {
+/*.line {
   width: 289px;
   height: 4px;
   background-color: #1cdae6;
@@ -91,7 +103,7 @@
   right: 0;
   margin-top: 130px;
   border-radius: 10px 0px 0px 10px;
-}
+}*/
 
 .display-flex figure:hover {
   animation: vibrate 0.5s linear infinite;
@@ -133,23 +145,11 @@
   }
 
   .skillTextBox {
-    width: 358px;
-    gap: 25px;
+    background-position: 100% 115px;
     h2 {
-      position: relative;
-      right: 10%;
       font-size: 70px;
     }
-    p {
-      position: relative;
-      right: 10%;
-    }
-
-    .line {
-      width: 180px;
-      margin-top: 115px;
-    }
-  }
+          }
   .btn{
     position: relative;
     /*right: 10%;*/
@@ -160,13 +160,14 @@
 
     .background{
         height: 860px;
+        flex-direction: column-reverse;
+        justify-content: center;
     }
     .skillTextBox {
         width: 100%;
         margin-top: -190px;
         h2{
-          left: 5%;
-          width: fit-content;
+          margin-left: 5%;
         }
         line{
           width: 300px;
@@ -211,6 +212,10 @@
       width: 22px;
     }
   }
+  .skillTextBox {
+    background-position: 210px 115px;
+    
+  }
   
   
    
@@ -228,19 +233,22 @@
   .skillIcons{
     margin-left: -45px !important;
     transform: scale(0.8);
+    margin-top: -190px;
   }
 
   .skillTextBox {
     
     h2{
       font-size: 45px;
-      top: 25px;
+     margin-top: 60px;
       width: fit-content;
     }
-    line{
-      width: 170px;
-    }
     
+    
+}
+
+.btn{
+  margin-top: 450px;
 }
 }
 
