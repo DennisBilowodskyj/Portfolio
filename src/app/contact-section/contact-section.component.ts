@@ -24,16 +24,23 @@ showPrivacyP = false
 /*http = inject(HttpClient);*/
 
 async sendMail(){
-  let contactMail = new FormData();
-  contactMail.append('name', this.myForm?.value.name);
-  contactMail.append('email', this.myForm?.value.email);
-  contactMail.append('message', this.myForm?.value.message);
+  //let contactMail = new FormData();
+  //contactMail.append('name', this.myForm?.value.name);
+  //contactMail.append('email', this.myForm?.value.email);
+  //contactMail.append('message', this.myForm?.value.message);
+
+  let contactMail = {
+    name : this.myForm?.value.name,
+    email: this.myForm?.value.email,
+    message : this.myForm?.value.message
+  };
   this.isSending = true;
   try {
     const response = await fetch ('https://dennis-bilowodskyj.com/sendMail.php',{
       method: 'POST',
-      body: contactMail
+      body: JSON.stringify(contactMail)
     });
+    
     if(response.ok){
       this.emailSent = true;
       this.myForm?.resetForm();
