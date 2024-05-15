@@ -1,7 +1,8 @@
 {
   "dependencies": {
-    "@angular/common": "^17.3.5",
+    "@angular/common": "^17.3.8",
     "@angular/forms": "^17.3.5",
+    "@angular/material": "^17.3.8",
     "@angular/router": "^17.3.5",
     "@ngx-translate/http-loader": "^8.0.0",
     "utils": "^0.3.1",
