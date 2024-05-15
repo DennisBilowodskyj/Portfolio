@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
-import { MAT_SNACK_BAR_DEFAULT_OPTIONS, MatSnackBar } from '@angular/material/snack-bar';
+import { MatSnackBar, MatSnackBarRef, SimpleSnackBar, TextOnlySnackBar } from '@angular/material/snack-bar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -36,21 +36,17 @@ export class ContactSectionComponent {
 
   constructor(private _snackBar: MatSnackBar) {}
 
-  @NgModule({
-    providers: [
-      {provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: {duration: 3000}}
-    ]
-  })
 
   async sendMail() {
    
-
     let contactMail = {
       name: this.myForm?.value.name,
       email: this.myForm?.value.email,
       message: this.myForm?.value.message,
     };
     this.isSending = true;
+    let snackBarRef : MatSnackBarRef<SimpleSnackBar> | undefined;
+
     try {
       const response = await fetch(
         'https://dennis-bilowodskyj.com/sendMail.php',
@@ -62,29 +58,36 @@ export class ContactSectionComponent {
 
       if (response.ok) {
         this.emailSent = true;
-        this._snackBar.open('Email sent successfully', '', {
+        snackBarRef = this._snackBar.open('Email sent successfully', '', {
+          duration: 3000
         });
         this.myForm?.resetForm();
       } else {
         this.isError = true;
-        this._snackBar.open('Failed to send email', '', {
+        snackBarRef = this._snackBar.open('Failed to send email', '', {
+          duration: 3000
         });
       }
     } catch (error) {
       this.isError = true;
-      this._snackBar.open('An error occurred', '', {
+      snackBarRef = this._snackBar.open('An error occurred', '', {
+        duration: 3000
       });
     } finally {
       setTimeout(() => {
         this.isSending = false;
         this.emailSent = false;
         this.isError = false;
-      }, );
+        if (snackBarRef){
+          snackBarRef.dismiss();
+        }
+      }, 3000);
     }
   }
 
   openPrivacyPolicy() {
     this.showPrivacyP = true;
   }
+
 
 }
