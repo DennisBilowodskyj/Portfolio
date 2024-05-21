@@ -1,8 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
-/* You can add global styles to this file, and also import other style files */
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
+  max-width: 1920px;
+  margin: 0 auto;
 }
 html {
   scroll-behavior: smooth;
@@ -15,6 +15,8 @@ html {
 .mat-mdc-snack-bar-container {
   position: fixed !important;
   z-index: 999 !important;
+  max-width: 1920px !important;
+  margin-top: -60px !important;
 }
 
 .mat-mdc-snack-bar-container .mdc-snackbar__label {
@@ -35,6 +37,26 @@ html {
 .mdc-snackbar__surface::before {
     border: 1px solid rgb(81 81 81) !important;
   }
+
+  .mat-mdc-snack-bar-container .mdc-snackbar__surface {
+     min-width: unset !important;
+     max-width: unset !important; 
+}
+
+.mdc-snackbar--open .mdc-snackbar__surface{
+  transform: scale(0.8) !important;
+}
+
+@media (max-width: 480px) {
+  
+      .mat-mdc-snack-bar-container {
+          margin: unset !important;
+      }
+      .mdc-snackbar--open .mdc-snackbar__surface {
+        transform: scale(0.7);
+        
+    }
+    }
 
 /* poppins-100 - latin */
 @font-face {

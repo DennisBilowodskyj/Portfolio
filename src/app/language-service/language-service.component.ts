@@ -9,10 +9,10 @@ export class LanguageService {
   constructor(private translate: TranslateService) { }
 
   translateTo(language: string) {
-    this.translate.use(language); // Übersetzen in die angegebene Sprache
+    this.translate.use(language);
   }
 
   getCurrentLanguage(): string {
-    return this.translate.currentLang; // Aktuelle Sprache abrufen
+    return this.translate.currentLang; 
   }
 }

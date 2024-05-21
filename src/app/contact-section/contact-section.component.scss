@@ -120,7 +120,7 @@
     border-radius: 10px;
     cursor: pointer;
     font-family: "Poppins";
-    width: 253px;
+    width: 285px;
     height: 58px;
     font-size: 23px;
     font-weight: 400;
@@ -135,7 +135,7 @@
   }
   button[type="submit"] .active:hover {
     background-color: #9747ff;
-    width: 273px;
+    width: 290px;
     height: 68px;
   }
 
@@ -420,6 +420,10 @@ textarea:focus-visible:not(.valid) {
 .goUpButton{
   right: -2%;
   margin-top: 600px;
+}
+
+.headline{
+  padding: 2rem 0rem;
 }
 }
 

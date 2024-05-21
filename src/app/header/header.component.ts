@@ -11,10 +11,10 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-  constructor(private languageService: LanguageService) { } // Inject LanguageService
+  constructor(private languageService: LanguageService) { } 
 
   switchLanguage(language: string) {
-    this.languageService.translateTo(language); // Aufruf der translateTo-Methode des LanguageService
+    this.languageService.translateTo(language); 
   }
 
 

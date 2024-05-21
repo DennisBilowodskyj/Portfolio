@@ -56,16 +56,16 @@
   margin-top: 170px;
   flex-direction: column;
   gap: 35px;
-  background-image: url('../../assets/img/LINE2.png');
+  background-image: url("../../assets/img/LINE2.png");
   background-position: 280px 130px;
-    background-repeat: no-repeat;
+  background-repeat: no-repeat;
   h2 {
     font-weight: 700;
     font-size: 90px;
     line-height: 108px;
     height: 35px;
   }
-  img{
+  img {
     width: 55%;
     height: 4px;
     margin-top: -85px;
@@ -95,15 +95,6 @@
     padding: 20px 40px;
   }
 }
-/*.line {
-  width: 289px;
-  height: 4px;
-  background-color: #1cdae6;
-  position: absolute;
-  right: 0;
-  margin-top: 130px;
-  border-radius: 10px 0px 0px 10px;
-}*/
 
 .display-flex figure:hover {
   animation: vibrate 0.5s linear infinite;
@@ -145,111 +136,101 @@
   }
 
   .skillTextBox {
-    background-position: 100% 115px;
+    background-position: 200px 115px;
     h2 {
       font-size: 70px;
     }
-          }
-  .btn{
+  }
+  .btn {
     position: relative;
-    /*right: 10%;*/
   }
 }
 
 @media screen and (max-width: 880px) {
+  .background {
+    height: 860px;
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+  .skillTextBox {
+    width: 100%;
+    margin-top: -190px;
+    background-position: 590px 115px;
+    h2 {
+      margin-left: 5%;
+      padding: 2rem 0rem;
+    }
+    line {
+      width: 300px;
+    }
+    p {
+      display: flex;
+      text-align: left;
+      margin-left: 5%;
+      right: unset;
+    }
+  }
+  .btn {
+    justify-content: center;
+    margin-top: 600px;
+  }
 
-    .background{
-        height: 860px;
-        flex-direction: column-reverse;
-        justify-content: center;
-    }
-    .skillTextBox {
-        width: 100%;
-        margin-top: -190px;
-        h2{
-          margin-left: 5%;
-        }
-        line{
-          width: 300px;
-        }
-        p{
-          display: flex;
-          text-align: left;
-          margin-left: 5%;
-          right: unset;
-        }
-    }
-    .btn{
-      justify-content: center;
-      /*left: 5%;*/
-      margin-top: 600px;
-    }
-
-    .skillIcons[_ngcontent-ng-c2390456407] {
-        gap: 70px;
-        margin-top: 370px;
-        margin-left: unset;
-        padding: 11rem 0rem;
-    }
+  .skillIcons[_ngcontent-ng-c2390456407] {
+    gap: 70px;
+    margin-top: 370px;
+    margin-left: unset;
+    padding: 11rem 0rem;
+  }
 }
 
 @media screen and (max-width: 630px) {
-  .display-flex{
-    figure{
+  .skillTextBox {
+    background-position: 345px 115px;
+  }
+  .display-flex {
+    figure {
       width: 50px;
     }
   }
-  
 
-.skillIcons{
-  margin-left: unset;
-  scale: 0.9;
-}
+  .skillIcons {
+    margin-left: unset;
+    scale: 0.9;
+  }
 }
 @media screen and (max-width: 520px) {
-  .display-flex{
-    figure{
+  .display-flex {
+    figure {
       width: 22px;
     }
   }
   .skillTextBox {
     background-position: 210px 115px;
-    
   }
-  
-  
-   
 }
 
-
 @media screen and (max-width: 390px) {
-  .display-flex{
-    /*position: relative;
-    left: 5%;*/
-    figure{
+  .display-flex {
+    figure {
       width: 22px;
     }
   }
-  .skillIcons{
+  .skillIcons {
     margin-left: -45px !important;
     transform: scale(0.8);
-    margin-top: -190px;
+    margin-top: -150px;
   }
 
   .skillTextBox {
-    
-    h2{
+    h2 {
       font-size: 45px;
-     margin-top: 60px;
+      margin-top: 60px;
       width: fit-content;
+      padding: 1rem 0rem;
     }
-    
-    
-}
+  }
 
-.btn{
-  margin-top: 450px;
+  .btn {
+    margin-top: 450px;
+  }
 }
-}
-
-

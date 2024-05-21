@@ -27,7 +27,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatInputModule,
     MatButtonModule,
     MatSnackBarModule,
-    SimpleSnackBar
+    SimpleSnackBar,
   ],
   templateUrl: './contact-section.component.html',
   styleUrl: './contact-section.component.scss',
@@ -62,8 +62,7 @@ export class ContactSectionComponent {
 
       if (response.ok) {
         this.emailSent = true;
-        this.showSnackBar('Email sent successfully', 'success'); 
-       
+        this.showSnackBar('Email sent successfully', 'success');
         this.myForm?.resetForm();
       } else {
         this.isError = true;
@@ -74,6 +73,13 @@ export class ContactSectionComponent {
       this.showSnackBar('An error occurred', 'error');
     } finally {
       this.resetFlagsAfterTimeout(3000);
+    
+      setTimeout(() => {
+        const snackbarElement = document.querySelector('mat-snack-bar-container.mdc-snackbar--open');
+        if (snackbarElement && snackbarElement instanceof HTMLElement) {
+          snackbarElement.remove();
+        }
+      }, 3000); 
     }
   }
 
@@ -82,7 +88,7 @@ export class ContactSectionComponent {
     if (type === 'success') {
       duration = 3000;
     } else if (type === 'error') {
-      duration = 5000; 
+      duration = 5000;
     }
 
     this.snackBarRef = this._snackBar.open(message, '', {

@@ -16,7 +16,7 @@
   position: absolute;
   display: flex;
   flex-direction: column;
-  top: 60%;
+  top: 35%;
   left: 50%;
   gap: 35px;
   transform: translate(-50%, -50%);
@@ -100,7 +100,7 @@
   width: 28px;
   height: 160px;
   margin-top: -125px;
-  animation: wobble 1s infinite linear;
+  animation: wobble 800ms infinite linear;
   align-items: center;
   justify-content: center;
   @keyframes wobble {
@@ -219,6 +219,7 @@ transform: scale(0.6) translate(114px, -102px);
 }
 
 @media screen and (max-width:420px) {
+ 
   .textOne {
     font-size: 15px;
     top: -105px;
