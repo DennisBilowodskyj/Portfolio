@@ -1,11 +1,13 @@
 <div class="headerContent">
+  <div class="innerContent">
   <div class="headerMenu">
+    
     <a href="#">
       <img src="./assets/img/1-AnyEraser.png" />
     </a>
   </div>
   <div class="headerMenu">
-    <a href="#aboutme">About me</a>
+    <a href="#aboutMeText">About me</a>
     <a href="#skills">Skills</a>
     <a href="#portfolio">Portfolio</a>
     <a (click)="switchLanguage('en')">EN</a>
@@ -16,13 +18,14 @@
       <a (click)="switchLanguage('en')">EN</a>
       <a (click)="switchLanguage('de')">DE</a>
     </div>
-    <div>
+    <div class="openBurger">
       <img src="./assets/img/burgerMenu.png" (click)="openBurgerMenu()" />
     </div>
   </div>
+</div>
   <div class="overlay" *ngIf="showBurgerMenu">
     <div class="burgerDiv">
-      <a href="#aboutme" (click)="closeBurgerMenu()">About me</a>
+      <a href="#aboutMeText" (click)="closeBurgerMenu()">About me</a>
       <a href="#skills" (click)="closeBurgerMenu()">Skills</a>
       <a href="#portfolio" (click)="closeBurgerMenu()">Portfolio</a>
       <a href="#contact" (click)="closeBurgerMenu()">Contact</a>

@@ -1,62 +1,87 @@
 <div class="portfolio-section">
-  <div class="textBox">
-    <h2>Portfolio</h2>
-    <p>
-      {{ 'portfolioHeadline' | translate }}
+  <div class="innerContent">
+    <div class="textBox">
+      <div class="lineContent">
+      <div class="line"></div>
 
-    </p>
+      <h2>Portfolio</h2>
+    </div>
+      <p>
+        {{ "portfolioHeadline" | translate }}
+      </p>
 
-    <div class="line"></div>
+      
+    </div>
+    <div class="imgContent">
+      <div
+        data-aos="fade-left"
+        data-aos-offset="100"
+        data-aos-easing="ease-in-sine"
+        class="imgPolloLoco"
+        >
+        <div class="btnContainer">
+          <div class="btnGit">
+            <a href="https://github.com/DennisBilowodskyj" target="_blank"
+              >Github</a
+            >
+          </div>
+          <div class="btnLive">
+            <a
+              href="https://el-pollo-loco.dennis-bilowodskyj.com/index.html"
+              target="_blank"
+              >Live test</a
+            >
+          </div>
+        </div>
+
+        <img src="./assets/img/pollo loco.png" class="imgPolloLocoImage" />
+        <div class="d-none Epl">
+          <div class="display-flex">
+            <h3>El Pollo Loco</h3>
+            <div>
+              {{ "EPL" | translate }}
+            </div>
+            <p>JavaScript | HTML | CSS</p>
+          </div>
+        </div>
+      </div>
+      <div
+        data-aos="fade-right"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine"
+        class="imgPolloLoco"
+       >
+        <div class="btnContainer">
+          <div class="btnGit">
+            <a href="https://github.com/DennisBilowodskyj" target="_blank"
+              >Github</a
+            >
+          </div>
+          <div class="btnLive">
+            <a href="http://join.dennis-bilowodskyj.com/html/" target="_blank"
+              >Live test</a
+            >
+          </div>
+        </div>
+        
+        <img src="./assets/img/join.png" class="imgPolloLocoImage" />
+        <div class="d-none">
+          <div class="display-flex">
+            <h3>Join</h3>
+            <div>
+              {{ "join" | translate }}
+            </div>
+            <p>Angular | TypeScript | HTML | CSS | Firebase</p>
+          </div>
+        </div>
+      </div>
+      
+    </div>
   </div>
-  <div class="imgContent">
-    <div data-aos="fade-right" class="imgPolloLoco">
-      <div class="btnContainer">
-        <div class="btnGit">
-          <a href="https://github.com/DennisBilowodskyj" target="_blank">Github</a>
-        </div>
-        <div class="btnLive">
-          <a href="https://el-pollo-loco.dennis-bilowodskyj.com/index.html" target="_blank">Live test</a>
-        </div>
-      </div>
-
-      <div class="greenShadow">
-        <img src="./assets/img/Green shadow.png" />
-      </div>
-      <img src="./assets/img/pollo loco.png" class="imgPolloLocoImage" />
-      <div class="d-none Epl">
-        <div class="display-flex">
-          <h3>El Pollo Loco</h3>
-          <div>
-            {{ 'EPL' | translate }}
-
-          </div>
-          <p>JavaScript | HTML | CSS</p>
-        </div>
-      </div>
-    </div>
-    <div class="imgPolloLoco">
-      <div class="btnContainer">
-        <div class="btnGit">
-          <a href="https://github.com/DennisBilowodskyj" target="_blank">Github</a>
-        </div>
-        <div class="btnLive">
-          <a href="http://join.dennis-bilowodskyj.com/html/" target="_blank">Live test</a>
-        </div>
-      </div>
-      <div class="blueShadow">
-        <img src="./assets/img/Blue shadow 1.png" />
-      </div>
-      <img src="./assets/img/join.png" class="imgPolloLocoImage" />
-      <div class="d-none">
-        <div class="display-flex">
-          <h3>Join</h3>
-          <div>
-            {{ 'join' | translate }}
-
-          </div>
-          <p>Angular | TypeScript | HTML | CSS | Firebase</p>
-        </div>
-      </div>
-    </div>
+  <div class="blueShadow">
+    <img src="./assets/img/Blue shadow 1.png" />
+  </div>
+  <div class="greenShadow">
+    <img src="./assets/img/Green shadow.png" />
   </div>
 </div>

@@ -1,8 +1,21 @@
 .portfolio-section {
-  max-width: 1920px;
   background-color: #141d2f;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
 }
 
+.innerContent {
+  max-width: 1920px;
+  width: 100%;
+}
+.lineContent {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  position: relative;
+}
 .textBox {
   color: white;
   display: flex;
@@ -12,9 +25,8 @@
     font-weight: 700;
     font-size: 90px;
     line-height: 108px;
-    margin-left: 100px;
-    height: 35px;
     padding: 1rem;
+    margin-left:50px ;
   }
   p {
     font-weight: 400;
@@ -22,18 +34,20 @@
     line-height: 19px;
     width: 473px;
     height: 38px;
-    margin-left: 99px;
+    margin-left: 50px;
     z-index: 2;
+    margin-left:50px ;
+
   }
 }
 
 .line {
-  width: 50px;
+  width: 350px;
   height: 4px;
   border-radius: 0 10px 10px 0;
   background-color: #9747ff;
-  position: relative;
-  bottom: 130px;
+  left: -300px;
+  position: absolute;
 }
 
 .imgContent {
@@ -43,7 +57,7 @@
   margin-top: 100px;
   position: relative;
   height: 700px;
-  z-index: 1;
+  z-index: 2;
 }
 .imgPolloLoco {
   width: 603px;
@@ -65,7 +79,7 @@
   transition: visibility 150ms ease-in-out;
 }
 .imgPolloLoco:hover .imgPolloLocoImage {
-  transition: opacity 150ms ease-in-out, transform 150ms ease-in-out !important;
+  transition: opacity 150ms ease-in-out, transform 300ms ease-in-out !important;
   opacity: 0.5;
   transform: scale(1.55) translateX(10px) translateY(-40px) !important;
 }
@@ -161,16 +175,16 @@
 
 .greenShadow {
   position: absolute;
-  top: -125px;
+  top: 220rem;
   left: 0;
-  z-index: -1;
+  z-index: 1;
 }
 
 .blueShadow {
   position: absolute;
   right: 0;
-  top: -500px;
-  z-index: -1;
+  top: 180rem;
+  z-index: 1;
 }
 
 @media screen and (max-width: 1330px) {
@@ -234,20 +248,22 @@
 }
 
 @media screen and (max-width: 880px) {
-   .Epl{
+ 
+  .Epl {
     top: 265px !important;
   }
   .blueShadow {
-    top: -280px;
+    top: 210rem;
   }
   .greenShadow {
-    top: 460px;
+    top: 250rem;
   }
 
   .imgContent {
     height: unset;
     flex-direction: column;
     align-items: center;
+    margin-top: 40px;
   }
   .imgPolloLoco {
     width: 600px;
@@ -258,9 +274,7 @@
       font-size: 45px;
     }
   }
-  .line {
-    bottom: 90px;
-  }
+ 
 
   .imgPolloLoco:hover .imgPolloLocoImage {
     transform: scale(1.55) translateX(5px) translateY(-40px) !important;
@@ -269,7 +283,7 @@
   .d-none {
     width: 600px;
     height: 335px;
-    top: 900px;
+    top: 265px;
   }
   .display-flex {
     h3 {
@@ -290,8 +304,18 @@
     margin-top: 140px;
   }
 }
+
+@media screen and (max-width: 770px) {
+.greenShadow{
+top: 305rem;
+}
+.blueShadow{
+  top: 265rem;
+}
+}
+  
 @media screen and (max-width: 680px) {
-  .Epl{
+  .Epl {
     top: 200px !important;
   }
   .textBox {
@@ -305,27 +329,18 @@
     }
   }
 
-  .line {
-    width: 20px;
-  }
-  .imgPolloLoco {
+    .imgPolloLoco {
     width: 500px;
     height: 500px;
   }
-  .greenShadow {
-    top: 330px;
-  }
-
-  .greenShadow {
-    top: -35px;
-  }
+  
   .btnContainer {
     margin-left: 60px;
     margin-top: 100px;
   }
 
   .d-none {
-    top: 736px;
+    top: 200px;
     width: 500px;
     height: 300px;
   }
@@ -347,8 +362,10 @@
 }
 
 @media screen and (max-width: 570px) {
-
-  .Epl{
+  .line{
+    left: -320px;
+  }
+  .Epl {
     top: 181px !important;
   }
   .imgPolloLoco {
@@ -356,7 +373,6 @@
     height: 400px;
   }
   .greenShadow {
-    top: 410px;
     img {
       width: 246px;
       height: 547px;
@@ -364,11 +380,10 @@
   }
   .btnContainer {
     margin-left: 10px;
-    
   }
 
   .d-none {
-    top: 616px;
+    top: 181px;
     width: 400px;
     height: 220px;
   }
@@ -383,13 +398,14 @@
     }
     p {
       font-size: 16px;
-      margin-top: 20px;    
+      margin-top: 20px;
     }
   }
 }
 
-@media screen and (max-width: 425px) {
-  .Epl{
+@media screen and (max-width: 430px) {
+  
+  .Epl {
     top: 121px !important;
   }
   .textBox p {
@@ -399,22 +415,33 @@
     width: 300px;
     height: 300px;
   }
-  .greenShadow {
-    top: -35px;
-  }
+  .blueShadow{
+    top: 230rem; 
+    img{
+      width: 372px;
+        height: 384px;
+    }
+    }
+    .greenShadow {
+      top: 250rem;
+      img{
+      width: 246px;
+        height: 547px;
+    }
+    }
   .btnContainer {
     margin-left: 15px;
     margin-top: 50px;
     gap: 33px;
   }
-  .btnGit a{
+  .btnGit a {
     font-size: 16px;
   }
-.btnLive a{
-  font-size: 16px;
-}
+  .btnLive a {
+    font-size: 16px;
+  }
   .d-none {
-    top: 455px;
+    top: 121px;
     width: 300px;
     height: 180px;
   }
@@ -429,11 +456,27 @@
     p {
       margin-top: 15px;
       line-height: 19px;
-
     }
   }
 
   .imgPolloLoco:hover .imgPolloLocoImage {
     transform: scale(1.55) translateX(5px) translateY(-40px) !important;
   }
+}
+
+@media screen and (max-width: 390px) {
+.blueShadow{
+top: 220rem; 
+img{
+  width: 372px;
+    height: 384px;
+}
+}
+.greenShadow {
+  top: 240rem;
+  img{
+  width: 246;
+    height: 547px;
+}
+}
 }

@@ -1,14 +1,21 @@
 .aboveTheFoldContent {
   background-color: #141d2f;
-  max-width: 1920px;
   z-index: 1;
   position: relative;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.innerContent{
+  max-width: 1920px;
+    width: 100%;
 }
 
 .firstImageSection {
   display: flex;
   justify-content: space-between;
-  position: relative;
   z-index: -1;
 }
 
@@ -29,10 +36,10 @@
     text-wrap: nowrap;
   }
   p:last-child {
-    font-size: 50px;
+    font-size: 60px;
     font-weight: 400;
     display: flex;
-    margin-top: -90px;
+    margin-top: -100px;
     color: #9747ff;
   }
 }
@@ -57,7 +64,8 @@
 .btn {
   display: flex;
   justify-content: center;
-  a {
+}
+  .btn a {
     padding: 15px 30px;
     text-decoration: none;
     background-color: #70e61c;
@@ -65,16 +73,16 @@
     color: #ffffff;
     font-size: 23px;
     font-weight: 400;
-    transition: background-color 100ms ease-in-out, padding 100ms ease-in-out;
+    transition: background-color 100ms ease-in-out,  100ms ease-in-out;
   }
-  & :hover {
+
+ .btn a:hover  {
     background-color: #9747ff;
-    padding: 20px 40px;
-  }
-}
+    transform: scale(1.2);  }
+
 
 .contactLine {
-  width: 100px;
+  width: 300px;
   height: 4px;
   background-color: #70e61c;
   border-radius: 0 10px 10px 0;
@@ -83,6 +91,9 @@
   display: flex;
   align-items: center;
   gap: 42px;
+  position: absolute;
+  left: 0;
+  top: 900px;
   a {
     display: flex;
     gap: 42px;
@@ -96,13 +107,14 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  left: 90%;
   width: 28px;
   height: 160px;
-  margin-top: -125px;
   animation: wobble 800ms infinite linear;
   align-items: center;
   justify-content: center;
+  top: 900px;
+  margin-left: auto;
+  right: 100px;
   @keyframes wobble {
     0% {
       transform: translateY(-2px) rotate(0deg); /* Hier haben wir translateY für die Bewegung nach unten und rotate für die Rotation hinzugefügt */
@@ -130,6 +142,11 @@
     height: 26px;
     margin: 37px auto;
   }
+}
+
+.firstImageSection img:first-child{
+  position: absolute;
+  left: 0;
 }
 .firstImageSection img:last-child{
   position: absolute;
@@ -189,7 +206,9 @@
   }
   
   
+  @media screen and (max-height:700px) {
 
+  }
 
 @media screen and (max-width:570px) {
   .myName p:first-child {
@@ -214,8 +233,14 @@ transform: scale(0.6) translate(114px, -102px);
 }
 
 .firstImageSection img:first-child{
-  transform: scale(0.6) translate(-34%, -45%);}
+  transform: scale(0.6) translate(-34%, -45%);
+}
 
+
+
+.iconSection{
+  position: relative;
+  top: -50px;
 }
 
 @media screen and (max-width:420px) {
@@ -243,8 +268,12 @@ margin-top: -25px;
 
 }
 
+.iconSection{
+  top: 450px;
+}
 
 
 }
 
 
+}

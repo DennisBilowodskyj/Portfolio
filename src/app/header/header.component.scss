@@ -1,13 +1,20 @@
 .headerContent {
   background-color: #141d2f;
-  max-width: 1920px;
-  height: 100px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   position: sticky;
   top: 0;
   z-index: 1000;
+  height: 100px;
+}
+
+.innerContent{
+  max-width: 1920px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .headerMenu {
   margin: 100px;
@@ -53,6 +60,11 @@
     gap: 60%;
   }
 
+  .openBurger{
+    cursor: pointer;
+    z-index: 99999;
+  }
+
   .overlay {
     .burgerDiv {
       margin-top: 500px;
@@ -60,9 +72,10 @@
   }
   .language {
     display: flex;
-    gap: 10px;
+    gap: 20px;
     color: white;
     font-size: 23px;
+    cursor: pointer;
   }
 
   .headerMenu {
@@ -92,7 +105,7 @@
   left: 0;
   width: 100%;
   height: 200%;
-  background-color: #141d2feb;
+  background-color: rgb(20 29 47 / 96%);;
   z-index: 9999;
   display: flex;
   justify-content: center;

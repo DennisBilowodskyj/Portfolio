@@ -1,9 +1,17 @@
 .aboutMeContent {
   background-color: #141d2f;
-  max-width: 1920px;
   height: 870px;
   display: flex;
+  justify-content: center;
   position: relative;
+  overflow: hidden;
+}
+
+.innerContent {
+  max-width: 1920px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
 }
 .aboutMe {
   width: 474px;
@@ -11,7 +19,7 @@
   color: white;
   display: flex;
   flex-direction: column;
-  margin-left: 100px;
+  margin-left: 50px;
   margin-top: 70px;
 
   h1 {
@@ -51,11 +59,11 @@
     width: 707px;
     height: 671px;
     position: absolute;
-    right: 5%;
+    right: 10%;
   }
   img:last-of-type {
     position: absolute;
-    right: 6%;
+    right: 12%;
   }
 }
 
@@ -78,7 +86,8 @@
 @media screen and (max-width: 1100px) {
   .aboutMe {
     margin-left: 3%;
-    margin-top: 200px;
+    margin-top: 160px;
+    padding: 2rem 0rem;
     h1 {
       font-size: 60px;
     }
@@ -89,12 +98,14 @@
   .aboutMePhoto img:first-of-type {
     right: -9.5%;
     transform: scale(0.7);
+    top: 180px;
   }
 
   .aboutMePhoto img:last-of-type {
     right: -8%;
     left: unset;
     transform: scale(0.7);
+    top: 180px;
   }
 }
 
@@ -118,15 +129,21 @@
 }
 
 @media screen and (max-width: 770px) {
+  .innerContent {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
   .aboutMeContent {
     height: unset;
     flex-direction: column-reverse;
     align-items: center;
   }
   .aboutMe {
-    margin-top: 50px;
+    bottom: 330px;
     z-index: 1;
-    height: 800px;
+    //height: 800px;
+    position: relative;
+    padding: 3rem 0rem;
     h1 {
       font-size: 50px;
     }
@@ -155,15 +172,26 @@
   .aboutMePhoto img:first-of-type {
     transform: translate(-50%) scale(0.7);
     left: 50%;
+    top: 35px;
   }
 
   .aboutMePhoto img:last-of-type {
     transform: translate(-50%) scale(0.8);
     left: 50%;
     width: 480px;
+    top: 35px;
   }
 }
 
+@media screen and (max-width: 430px) {
+  .aboutMePhoto img:first-of-type {
+    top: -50px;
+  }
+
+  .aboutMePhoto img:last-of-type {
+    top: -50px;
+  }
+}
 @media screen and (max-width: 390px) {
   .aboutMe {
     width: 300px;

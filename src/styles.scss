@@ -1,11 +1,42 @@
 body {
-  margin: 0;
   font-family: "Poppins", sans-serif;
-  max-width: 1920px;
   margin: 0 auto;
 }
 html {
   scroll-behavior: smooth;
+  background: linear-gradient(180deg, #141d2f, #141d2fbd);}
+  
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #0000007d;
+  border: 0px none #000000ad;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9747ff;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #1cdae6;
+}
+::-webkit-scrollbar-track {
+  background: #000000ad;
+  border: 0px none #000000ad;
+}
+::-webkit-scrollbar-track:hover {
+  background: #70e61c;
+}
+::-webkit-scrollbar-track:active {
+  background: #ffffff;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
 }
 
 .mat-mdc-snack {

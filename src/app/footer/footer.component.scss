@@ -1,18 +1,26 @@
 .footer {
-  max-width: 1920px;
   height: 291px;
   background-color: #141d2f;
   position: relative;
   z-index: 999;
+  display: flex;
+  justify-content: center;
 }
-
+.innerContent{
+  max-width: 1920px;
+  width: 100%;
+}
 .line {
   border: 4px solid #70e61c;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
 }
 
 .footerDisplayFlex {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   transform: translate(-50%, -50%);
   position: relative;
@@ -32,7 +40,7 @@ span {
 .iconLink {
   display: flex;
   gap: 42px;
-
+margin-right: 50px;
   & :hover {
     transition: transform 200ms ease-in-out;
     transform: scale(1.1);
@@ -42,7 +50,7 @@ span {
 .imprint {
   display: flex;
   flex-direction: column;
-
+margin-left: 50px;
   a {
     font-size: 16px;
     color: white;
@@ -96,6 +104,7 @@ span {
 
   .imprint {
     align-items: center;
+    margin-left: inherit;
     a {
       top: 100px;
     }

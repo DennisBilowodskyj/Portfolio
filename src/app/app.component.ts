@@ -5,7 +5,8 @@ import { CommonModule } from '@angular/common';
 import { MainContentComponent } from './main-content/main-content.component';
 import { FooterComponent } from "./footer/footer.component";
 import { HeaderComponent } from "./header/header.component";
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 @Component({
     selector: 'app-root',
     standalone: true,
@@ -14,6 +15,10 @@ import { HeaderComponent } from "./header/header.component";
     imports: [CommonModule,RouterLink,RouterModule,RouterOutlet,  MainContentComponent, ImprintComponent,  FooterComponent, HeaderComponent,]
 })
 export class AppComponent {
-  title = 'Portfolio';
+  title = 'Dennis Bilowodskyj';
 
+
+  ngOnInit() {
+    AOS.init();
+  }
 }

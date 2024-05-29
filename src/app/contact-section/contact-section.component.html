@@ -1,12 +1,19 @@
 <div class="contactSection">
-  <div class="headline">
+  <div class="innerContent">
+  <div data-aos="fade-right"
+  data-aos-offset="300"
+  data-aos-easing="ease-in-sine" class="headline">
     <h2>Contact</h2>
     <div class="line"></div>
   </div>
   <div class="d-flex">
-    <div class="lineSpan"></div>
+    <div data-aos="fade-left"
+    data-aos-offset="300"
+    data-aos-easing="ease-in-sine" class="lineSpan"></div>
     <div>
-    <div class="spanContainer">
+    <div data-aos="fade-left"
+    data-aos-offset="300"
+    data-aos-easing="ease-in-sine" class="spanContainer">
       <span class="firstSpan"> {{ 'contactHeadline' | translate }}</span>
       <span class="secondSpan">
         {{ 'contactText1' | translate }}<br />
@@ -18,7 +25,9 @@
     </div>
   </div>
   
-  <div class="contactFormContainer">
+  <div data-aos="fade-right"
+  data-aos-offset="300"
+  data-aos-easing="ease-in-sine" data-aos-delay="100" class="contactFormContainer">
     <form (submit)="sendMail()" #myForm="ngForm">
       <label for="name"></label>
       <input
@@ -129,4 +138,5 @@
   <div class="purpleShadow">
     <img src="./assets/img/Purple shadow 2.png" />
   </div>
+</div>
 </div>

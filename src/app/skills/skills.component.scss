@@ -1,16 +1,23 @@
 .skillContent {
-  max-width: 1920px;
+  position: relative;
   img {
     position: absolute;
     width: 100%;
-    max-width: 1920px;
-    top: 1500px;
+    top: -20vh;
+    height: 800px;
   }
 }
 .background {
   background-color: #141d2f;
-  max-width: 1920px;
   height: 790px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.innerContent{
+  max-width: 1920px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
 }
@@ -19,7 +26,7 @@
   display: flex;
   position: relative;
   flex-direction: column;
-  gap: 80px;
+  gap: 55px;
   padding: 6rem 0rem;
 }
 .display-flex {
@@ -47,18 +54,16 @@
 }
 
 .skillTextBox {
-  width: 572px;
+  max-width: 572px;
   height: 286px;
-  position: relative;
   display: flex;
   color: white;
-  right: 0;
   margin-top: 170px;
   flex-direction: column;
   gap: 35px;
-  background-image: url("../../assets/img/LINE2.png");
-  background-position: 280px 130px;
-  background-repeat: no-repeat;
+  flex: 1;
+  min-width: 0;
+  
   h2 {
     font-weight: 700;
     font-size: 90px;
@@ -66,11 +71,14 @@
     height: 35px;
   }
   img {
-    width: 55%;
+    max-width: 630px;
     height: 4px;
-    margin-top: -85px;
     margin-left: 45%;
-  }
+    position: relative;
+    top: 170px;
+    width: 100%;
+    margin-left: 300px;
+}
   p {
     font-weight: 400;
     font-size: 16px;
@@ -135,6 +143,10 @@
     }
   }
 
+  .skillContent img {
+    top: -250px;
+  }
+
   .skillTextBox {
     background-position: 200px 115px;
     h2 {
@@ -144,18 +156,28 @@
   .btn {
     position: relative;
   }
+
+  
 }
 
 @media screen and (max-width: 880px) {
+
+  
   .background {
-    height: 860px;
-    flex-direction: column-reverse;
+    height: 1070px;
     justify-content: center;
+    flex: inherit;
+    max-width: inherit;
+  }
+
+  .innerContent{
+    flex-direction: column-reverse ;
   }
   .skillTextBox {
     width: 100%;
-    margin-top: -190px;
-    background-position: 590px 115px;
+    background-position: 590px 140px;
+    max-width: none;
+    margin-top: 0;
     h2 {
       margin-left: 5%;
       padding: 2rem 0rem;
@@ -173,19 +195,31 @@
   .btn {
     justify-content: center;
     margin-top: 600px;
+    cursor: pointer;
   }
 
   .skillIcons[_ngcontent-ng-c2390456407] {
     gap: 70px;
     margin-top: 370px;
     margin-left: unset;
-    padding: 11rem 0rem;
+    padding: 1rem 0rem;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .skillContent img {
+    top: -1060px;
+  }
+
+  .innerContent{
+    flex-direction: column-reverse;
+    margin-top: -40px;
   }
 }
 
 @media screen and (max-width: 630px) {
   .skillTextBox {
-    background-position: 345px 115px;
+    background-position: 345px 140px;
   }
   .display-flex {
     figure {
@@ -198,6 +232,8 @@
     scale: 0.9;
   }
 }
+
+
 @media screen and (max-width: 520px) {
   .display-flex {
     figure {
@@ -205,23 +241,38 @@
     }
   }
   .skillTextBox {
-    background-position: 210px 115px;
+    background-position: 210px 140px;
   }
+
+ 
+
+  
+
+  
 }
 
+@media screen and (max-width: 430px) {
+  .skillContent img{
+    top: -1090px;
+  }
+
+}
 @media screen and (max-width: 390px) {
   .display-flex {
     figure {
       width: 22px;
     }
   }
+  .skillContent img {
+    top: -1120px;
+  }
   .skillIcons {
     margin-left: -45px !important;
-    transform: scale(0.8);
-    margin-top: -150px;
-  }
+    transform: scale(0.8) !important;
+    bottom: 200px;  }
 
   .skillTextBox {
+    background-position: 210px 130px;
     h2 {
       font-size: 45px;
       margin-top: 60px;
@@ -230,7 +281,5 @@
     }
   }
 
-  .btn {
-    margin-top: 450px;
-  }
+ 
 }
