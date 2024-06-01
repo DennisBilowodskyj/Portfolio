@@ -8,9 +8,9 @@
   justify-content: center;
 }
 
-.innerContent{
+.innerContent {
   max-width: 1920px;
-    width: 100%;
+  width: 100%;
 }
 
 .firstImageSection {
@@ -56,7 +56,7 @@
   line-height: 108px;
 }
 
-.ptext{
+.ptext {
   display: flex;
   flex-direction: column;
 }
@@ -65,21 +65,21 @@
   display: flex;
   justify-content: center;
 }
-  .btn a {
-    padding: 15px 30px;
-    text-decoration: none;
-    background-color: #70e61c;
-    border-radius: 10px;
-    color: #ffffff;
-    font-size: 23px;
-    font-weight: 400;
-    transition: background-color 100ms ease-in-out,  100ms ease-in-out;
-  }
+.btn a {
+  padding: 15px 30px;
+  text-decoration: none;
+  background-color: #70e61c;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 23px;
+  font-weight: 400;
+  transition: background-color 100ms ease-in-out, 100ms ease-in-out;
+}
 
- .btn a:hover  {
-    background-color: #9747ff;
-    transform: scale(1.2);  }
-
+.btn a:hover {
+  background-color: #9747ff;
+  transform: scale(1.2);
+}
 
 .contactLine {
   width: 300px;
@@ -93,7 +93,7 @@
   gap: 42px;
   position: absolute;
   left: 0;
-  top: 900px;
+  top: 75%;
   a {
     display: flex;
     gap: 42px;
@@ -112,7 +112,7 @@
   animation: wobble 800ms infinite linear;
   align-items: center;
   justify-content: center;
-  top: 900px;
+  top: 75%;
   margin-left: auto;
   right: 100px;
   @keyframes wobble {
@@ -144,136 +144,169 @@
   }
 }
 
-.firstImageSection img:first-child{
+.firstImageSection img:first-child {
   position: absolute;
   left: 0;
 }
-.firstImageSection img:last-child{
+.firstImageSection img:last-child {
   position: absolute;
   right: 0;
 }
 
-@media screen and (min-width: 1100px) and (max-width:1330px) {
-  .myName p:first-child{
+@media screen and (min-width: 1100px) and (max-width: 1330px) {
+  .myName p:first-child {
     font-size: 80px;
   }
-  .textOne{
+  .textOne {
     top: 25px;
-    font-size:65px ;
+    font-size: 65px;
   }
 }
 
-@media screen  and (max-width:1100px) {
-  .textOne{
+@media screen and (max-width: 1100px) {
+  .textOne {
     top: -5px;
     font-size: 55px;
   }
-  .myName p:first-child{
+  .myName p:first-child {
     font-size: 70px;
   }
-  .myName p:last-child{
+  .myName p:last-child {
     font-size: 40px;
-
   }
   .firstImageSection img:first-child {
     transform: scale(0.7) translate(-35%, -10%);
-  
   }
 }
 
-@media screen and  (max-width:880px) {
+@media screen and (max-width: 880px) {
   .myName p:first-child {
     font-size: 45px;
+  }
+  .myName p:last-child {
+    font-size: 30px;
+    margin-top: -60px;
+  }
+  .textOne {
+    font-size: 35px;
+    top: -60px;
+  }
 }
-.myName p:last-child{
-  font-size: 30px;
-  margin-top: -60px;
 
-}
-.textOne{
-  font-size: 35px;
-  top: -60px;
-}
-}
-
-@media screen and (max-width:768px) {
-  .scrollDown{
+@media screen and (max-width: 768px) {
+  .scrollDown {
     display: none;
   }
   .firstImageSection img:last-child {
     transform: scale(0.8) translate(43px, 0px);
-}  
   }
-  
-  
-  @media screen and (max-height:700px) {
+}
 
-  }
+@media screen and (max-height: 700px) {
+}
 
-@media screen and (max-width:570px) {
+@media screen and (max-width: 570px) {
   .myName p:first-child {
     font-size: 35px;
+  }
+  .myName p:last-child {
+    font-size: 25px;
+    margin-top: -50px;
+  }
+  .textOne {
+    font-size: 25px;
+    top: -80px;
+    transform: rotate(-90deg) translate(0px, -130px);
+  }
+
+  .contactLine {
+    width: 64px;
+  }
+  .firstImageSection img:last-child {
+    transform: scale(0.6) translate(114px, -102px);
+  }
+
+  .firstImageSection img:first-child {
+    transform: scale(0.6) translate(-34%, -45%);
+  }
+
+  .iconSection {
+    position: relative;
+  }
+
+  @media screen and (max-width: 420px) {
+    .textOne {
+      font-size: 15px;
+      top: -105px;
+      transform: rotate(-90deg) translate(0px, -120px);
+    }
+    .myName p:first-child {
+      font-size: 20px;
+    }
+    .myName p:last-child {
+      font-size: 15px;
+      margin-top: -25px;
+    }
+
+    .firstImageSection img:first-child {
+      transform: scale(0.4) translate(-80%, -70%);
+    }
+    .firstImageSection img:last-child {
+      transform: scale(0.4) translate(75%, -55%);
+    }
+
+    
+  }
 }
-.myName p:last-child{
-  font-size: 25px;
-  margin-top: -50px;
+
+@media screen and (min-width: 1920px) and (min-height:1100px) {
+  .contactLine{
+    width: 1100px;
+  }
+  .iconSection{
+    left: -56%;
+    position: relative;
+  }
 
 }
-.textOne{
-  font-size: 25px;
-  top: -80px;
-  transform: rotate(-90deg) translate(0px, -130px);
+
+@media screen and (min-width: 3840px) and (min-height: 1100px) {
+  .iconSection {
+    scale: 1.5;
+  }
+  .contactLine {
+    width: 1285px;
+  }
+  .scrollDown {
+    text-wrap: nowrap;
+    p {
+      font-size: 40px;
+    }
+    img {
+      width: 40px;
+      height: 40px;
+      margin: 120px;
+    }
+  }
+  .btn a{
+    font-size: 40px;
+  }
 }
+
+@media screen and (min-width: 4096px) and (min-height:2304px) {
+  .firstImageSection img:first-child {
+    scale: 1.5;
+    top: 250px;
+  }
+  .firstImageSection img:last-child {
+    scale: 1.5;  
+  }
+}
+
+@media screen and (min-width: 5120px) and (min-height:2880px) {
 
 .contactLine{
-  width: 64px;
+  width: 1325px;
 }
-.firstImageSection img:last-child{
-transform: scale(0.6) translate(114px, -102px);
-}
-
-.firstImageSection img:first-child{
-  transform: scale(0.6) translate(-34%, -45%);
-}
-
-
-
-.iconSection{
-  position: relative;
-  top: -50px;
-}
-
-@media screen and (max-width:420px) {
- 
-  .textOne {
-    font-size: 15px;
-    top: -105px;
-    transform: rotate(-90deg) translate(0px, -120px);
-}
-.myName p:first-child {
-  font-size: 20px;
-}
-.myName p:last-child{
-font-size: 15px;
-margin-top: -25px;
-
-}
-
-.firstImageSection img:first-child {
-  transform: scale(0.4) translate(-80%, -70%);
-
-}
-.firstImageSection img:last-child {
-  transform: scale(0.4) translate(75%, -55%);
-
-}
-
-.iconSection{
-  top: 450px;
-}
-
-
-}
-
 
 }

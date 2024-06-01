@@ -6,8 +6,7 @@
     text-align: center;
     img{
         position: absolute;
-    left: 15%;
-    top: 10%;
+   display: flex;
     z-index: 1000;
     }
     a{
@@ -23,3 +22,12 @@
     padding: 50px;
 }
 
+@media screen and (min-width: 3840px) and (min-height:2160px) {
+
+    .imprintOverlay{
+    font-size: 40px;
+    img{
+        scale: 1.5;
+    }
+    }
+}

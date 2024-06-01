@@ -51,7 +51,7 @@ html {
 }
 
 .mat-mdc-snack-bar-container .mdc-snackbar__label {
-  color: white !important ;
+  color: #70e61c !important ;
 }
 
 .mdc-snackbar--opening,
@@ -66,12 +66,15 @@ html {
 }
 
 .mdc-snackbar__surface::before {
-    border: 1px solid rgb(81 81 81) !important;
+    border: 1px solid #1cdae6 !important;
   }
 
   .mat-mdc-snack-bar-container .mdc-snackbar__surface {
      min-width: unset !important;
      max-width: unset !important; 
+}
+.mdc-snackbar{
+  bottom: 430px !important;
 }
 
 .mdc-snackbar--open .mdc-snackbar__surface{

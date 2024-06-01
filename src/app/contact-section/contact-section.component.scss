@@ -513,3 +513,64 @@ textarea:focus-visible:not(.valid) {
 
   
 }
+
+@media screen and (min-width: 2560px) and (min-height:1440px) {
+  .lineSpan{
+    left: -320px;
+    width: 390px;
+  }
+}
+
+@media screen and (min-width: 3840px) and (min-height:2160px) {
+.contactSection{
+  height: 1220px;
+}
+.contactFormContainer{
+  scale: 1.5;
+  right: 10%;
+  top: 130px;
+}
+.headline{
+  scale: 1.5;
+}
+.lineSpan{
+  left: -960px;
+  width: 1020px;
+}
+
+.spanContainer{
+left: 100px;
+scale: 1.5;
+bottom: -10px;
+}
+
+}
+
+@media screen and (min-width: 4096px) and (min-height:2304px) {
+.lineSpan{
+  left: -1090px;
+  width: 1140px;
+}
+.line{
+  width: 1100px;
+  position: relative;
+  right: -90px;
+}
+.headline h2{
+  transform: inherit;
+}
+}
+
+@media screen and (min-width: 5120px) and (min-height:2880px) {
+.headline h2{
+  left: 100px;
+}
+.line{
+  width: 1300px;
+  right: -430px;
+}
+.lineSpan{
+  left: -1590px;
+  width: 1600px;
+}
+}

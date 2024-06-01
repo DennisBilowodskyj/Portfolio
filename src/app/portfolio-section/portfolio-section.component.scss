@@ -8,6 +8,7 @@
 .innerContent {
   max-width: 1920px;
   width: 100%;
+  z-index: 2;
 }
 .lineContent {
   display: flex;
@@ -175,7 +176,6 @@
 
 .greenShadow {
   position: absolute;
-  top: 220rem;
   left: 0;
   z-index: 1;
 }
@@ -183,7 +183,6 @@
 .blueShadow {
   position: absolute;
   right: 0;
-  top: 180rem;
   z-index: 1;
 }
 
@@ -252,11 +251,9 @@
   .Epl {
     top: 265px !important;
   }
-  .blueShadow {
-    top: 210rem;
-  }
+  
   .greenShadow {
-    top: 250rem;
+    margin-top: 570px;
   }
 
   .imgContent {
@@ -306,12 +303,7 @@
 }
 
 @media screen and (max-width: 770px) {
-.greenShadow{
-top: 305rem;
-}
-.blueShadow{
-  top: 265rem;
-}
+
 }
   
 @media screen and (max-width: 680px) {
@@ -416,14 +408,12 @@ top: 305rem;
     height: 300px;
   }
   .blueShadow{
-    top: 230rem; 
     img{
       width: 372px;
         height: 384px;
     }
     }
     .greenShadow {
-      top: 250rem;
       img{
       width: 246px;
         height: 547px;
@@ -464,19 +454,82 @@ top: 305rem;
   }
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 390px) and (max-height:740px) {
 .blueShadow{
-top: 220rem; 
+  margin-top: 280px;
 img{
   width: 372px;
     height: 384px;
 }
 }
 .greenShadow {
-  top: 240rem;
   img{
-  width: 246;
-    height: 547px;
+  width: 246px;
+  height: 547px;
 }
 }
+}
+
+@media screen and (min-width: 1920px), (max-width:2560px) and (min-height:1080px), (max-height:1440px) {
+ 
+  .imgContent{
+    margin-top: 60px;
+  }
+}
+
+@media screen and (min-width: 2560px) and (min-height:1440px) {
+  
+  .line{
+    left: -390px;
+    width: 390px;
+  }
+}
+
+@media screen and (min-width: 3840px) and (min-height:2160px) {
+.portfolio-section{
+  height: 1460px;
+}
+.imgContent{
+  scale: 1.5;
+  margin-top: 230px;
+}
+
+
+  .blueShadow{
+  scale: 1.5;
+  right: 109px;
+}
+.greenShadow{
+  
+    scale: 1.5;
+}
+.lineContent{
+  scale: 1.5;
+  z-index: 2;
+
+}
+.line{
+      left: -1000px;
+        width: 1320px;
+        
+}
+.textBox {
+h2{
+  
+    margin-left: 350px;
+ }
+ p{
+  scale: 1.5;
+  margin-left: 200px;
+ }
+}
+}
+
+@media screen and (min-width: 4096px) and (min-height:2304px) {
+
+
+}
+
+@media screen and (min-width: 5120px) and (min-height:2880px) {
+ 
 }

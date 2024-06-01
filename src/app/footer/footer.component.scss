@@ -116,3 +116,26 @@ margin-left: 50px;
     margin-top: -35px;
 }
 }
+
+@media screen and (min-width: 3840px) and (min-height:2160px) {
+.logo{
+  
+ img{
+  width: 250px;
+  height: 250px;
+}
+}
+
+.imprint a{
+  font-size: 26px;
+}
+ span{
+  font-size: 40px;
+}
+
+.iconLink{
+
+  margin-right: 80px;
+  scale: 1.5;
+}
+}
