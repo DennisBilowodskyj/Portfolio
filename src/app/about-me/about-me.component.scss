@@ -63,7 +63,7 @@
   }
   img:last-of-type {
     position: absolute;
-    right: 12%;
+    right: 2%;
   }
 }
 
@@ -75,14 +75,15 @@
     margin-top: 200px;
   }
   .aboutMePhoto img:first-of-type {
-    right: -3%;
+    right: 2%;
     transform: scale(0.75);
   }
 
   .aboutMePhoto img:last-of-type {
-    right: -1%;
+    right: -15%;
     left: unset;
     transform: scale(0.8);
+    bottom: 5%;
   }
   .aboutMe h1 {
     font-size: 70px;
@@ -108,11 +109,22 @@
   }
 
   .aboutMePhoto img:last-of-type {
-    right: -8%;
+    right: -27%;
     left: unset;
-    transform: scale(0.7);
-    top: 180px;
+    transform: scale(0.8);
+    top: 140px;
   }
+}
+
+@media screen and (max-width: 960px) {
+  .aboutMePhoto img:last-of-type {
+    right: -33%;
+    top: 160px;
+}
+.aboutMePhoto img:first-of-type {
+  right: -12%;
+  
+}
 }
 
 @media screen and (max-width: 890px) {
@@ -130,8 +142,9 @@
   }
 
   .aboutMePhoto img:last-of-type {
-    right: -10%;
+    right: -35%;
     left: unset;
+    top: 180px;
   }
 }
 
@@ -161,13 +174,13 @@
   .aboutMePhoto img:first-of-type {
     transform: translate(-50%);
     left: 50%;
-    width: 500px;
+    width: unset;
   }
 
   .aboutMePhoto img:last-of-type {
     transform: translate(-50%);
     left: 50%;
-    width: 550px;
+    width: unset;
   }
 }
 
@@ -182,14 +195,14 @@
   .aboutMePhoto img:first-of-type {
     transform: translate(-50%) scale(0.7);
     left: 50%;
-    top: 35px;
+    top: -35px;
   }
 
   .aboutMePhoto img:last-of-type {
-    transform: translate(-50%) scale(0.8);
-    left: 50%;
-    width: 480px;
-    top: 35px;
+    transform: translate(-50%) scale(0.7);
+    left: 55%;
+    width: unset;
+    top: -50px;
   }
 }
 
@@ -212,10 +225,10 @@
   }
 
   .aboutMePhoto img:last-of-type {
-    width: 490px;
-    transform: translate(-50%) scale(0.65);
-    left: 50%;
-    top: 35px;
+    width: unset;
+    transform: translate(-50%) scale(0.50);   
+     left: 55%;
+    top: -35px;
 
   }
 }
