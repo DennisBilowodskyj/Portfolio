@@ -310,3 +310,14 @@
 }
 
 }
+
+@media screen and  (min-width: 1024px) and (max-width: 1280px) and (min-height:800px) {
+  
+  .aboveTheFoldContent{
+    overflow: unset;
+  }
+
+  .scrollDown{
+    top: 60%;
+  }
+  }

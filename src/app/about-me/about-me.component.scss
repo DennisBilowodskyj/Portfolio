@@ -219,7 +219,7 @@
 
   .aboutMePhoto img:first-of-type {
     transform: translate(-50%) scale(0.55);
-    left: 50%;
+    left: 45%;
     width: 580px;
     top: 35px;
   }
@@ -251,3 +251,14 @@
   height: 950px;
 }
 }
+
+@media screen and (min-width: 1536px) and (max-height:995px) {
+  .aboutMeContent{
+    height: 750px;
+    overflow: unset;
+    img:first-of-type {
+      right: 15%;
+    }
+  }
+  
+  }
