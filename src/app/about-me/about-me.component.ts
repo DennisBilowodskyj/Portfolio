@@ -13,5 +13,4 @@ export class AboutMeComponent {
  constructor(private languageService: LanguageService) { }
 }
 
-console.log("Viewport-Breite:", window.innerWidth + "px");
-console.log("Viewport-Höhe:", window.innerHeight + "px");
+

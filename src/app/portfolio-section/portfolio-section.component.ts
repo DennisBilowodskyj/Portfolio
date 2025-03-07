@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
+import { ProjectdataService } from '../services/projectdata.service';
 
 @Component({
   selector: 'app-portfolio-section',
@@ -9,5 +10,7 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrl: './portfolio-section.component.scss'
 })
 export class PortfolioSectionComponent {
+
+  projectdata = inject(ProjectdataService)
 
 }

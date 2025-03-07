@@ -2,114 +2,43 @@
   <div class="innerContent">
     <div class="textBox">
       <div class="lineContent">
-      <div class="line"></div>
+        <div class="line"></div>
 
-      <h2>Portfolio</h2>
-    </div>
+        <h2>Portfolio</h2>
+      </div>
       <p>
         {{ "portfolioHeadline" | translate }}
       </p>
-
-      
     </div>
     <div class="imgContent">
+      @for(project of projectdata.projects; track project.github; let index = $index){
       <div
         data-aos="fade-left"
         data-aos-offset="100"
         data-aos-easing="ease-in-sine"
         class="imgPolloLoco"
-        >
+      >
         <div class="btnContainer">
           <div class="btnGit">
-            <a href="https://github.com/DennisBilowodskyj/El-Pollo-loco.git" target="_blank"
-              >Github</a
-            >
+            <a [href]="project.github" target="_blank">Github</a>
           </div>
           <div class="btnLive">
-            <a
-              href="https://el-pollo-loco.dennis-bilowodskyj.com/index.html"
-              target="_blank"
-              >Live test</a
-            >
+            <a [href]="project.link" target="_blank">Live test</a>
           </div>
         </div>
 
-        <img src="./assets/img/pollo loco.png" class="imgPolloLocoImage" />
+        <img [src]="project.image" class="imgPolloLocoImage" />
         <div class="d-none Epl">
           <div class="display-flex">
-            <h3>El Pollo Loco</h3>
+            <h3>{{ project.title }}</h3>
             <div>
-              {{ "EPL" | translate }}
+              {{ project.description | translate }}
             </div>
-            <p>JavaScript | HTML | CSS</p>
+            <p>{{ project.techstack }}</p>
           </div>
         </div>
       </div>
-      
-      <div
-        data-aos="fade-right"
-        data-aos-offset="300"
-        data-aos-easing="ease-in-sine"
-        class="imgPolloLoco"
-       >
-        <div class="btnContainer">
-          <div class="btnGit">
-            <a href="https://github.com/DennisBilowodskyj/Join.git" target="_blank"
-              >Github</a
-            >
-          </div>
-          <div class="btnLive">
-            <a href="http://join.dennis-bilowodskyj.com/html/" target="_blank"
-              >Live test</a
-            >
-          </div>
-        </div>
-        
-        <img src="./assets/img/join.png" class="imgPolloLocoImage" />
-        <div class="d-none">
-          <div class="display-flex">
-            <h3>Join</h3>
-            <div>
-              {{ "join" | translate }}
-            </div>
-            <p>JavaScript | HTML | CSS</p>
-          </div>
-        </div>
-      </div>
-
-      <div
-      data-aos="fade-left"
-      data-aos-offset="100"
-      data-aos-easing="ease-in-sine"
-      class="imgPolloLoco"
-      >
-      <div class="btnContainer">
-        <div class="btnGit">
-          <a href="https://github.com/DennisBilowodskyj/DaBubble.git" target="_blank"
-            >Github</a
-          >
-        </div>
-        <div class="btnLive">
-          <a
-            href="https://dabubble.dennis-bilowodskyj.com/"
-            target="_blank"
-            >Live test</a
-          >
-        </div>
-      </div>
-
-      <img src="../../assets/img/DABubble.png" class="imgPolloLocoImage" />
-      <div class="d-none Epl">
-        <div class="display-flex">
-          <h3>DABubble</h3>
-          <div>
-            {{ "DABubble" | translate }}
-          </div>
-          <p>Angular | Typescript | Firebase</p>
-        </div>
-      </div>
-    </div>
-      
+      }
     </div>
   </div>
   <div class="blueShadow">
