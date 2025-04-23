@@ -262,3 +262,14 @@
   }
   
   }
+
+  :host {
+    @supports (-moz-appearance: none) {
+      /* Firefox! */
+      .aboutMeTextBoxTwo img,
+      .aboutMeTextBoxThree img {
+        width: 50px;
+        height: auto;
+      }}}
+
+      
